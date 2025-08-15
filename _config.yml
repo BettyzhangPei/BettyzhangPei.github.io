@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yin's lab"
+title                    : "Homepage"
 title_separator          : "-"
-name                     : &name "Rui Yin"
+name                     : &name "Pei Zhang"
 description              : &description "personal description"
 url                      : https://rayin-saber.github.io/yinrui.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
