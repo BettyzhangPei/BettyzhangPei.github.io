@@ -27,5 +27,5 @@ author_profile: true
 ### No. 1 Middle School Affiliated to Central China Normal University
 - **Role:** Math Teacher  
 - **Period:** September 2016 – March 2017  
-- **Note:** Ranked among the top secondary schools in China (2016).
+- **Note:** Ranked among the top secondary schools in China (2016)
 
