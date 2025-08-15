@@ -34,4 +34,4 @@ Interested individuals are encouraged to contact Dr. Rui Yin (<A href="mailto:ru
 - Curriculum vitae
 - Undergraduate and graduate transcripts for PhD applicants.
 - Research statement and future interest for Postdoc applicants (PhD applicants are also encouraged to send a research statement).
-{% comment %}
+{% endcomment %}
