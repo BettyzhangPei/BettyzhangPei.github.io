@@ -5,7 +5,6 @@ permalink: /join us/
 author_profile: true
 ---
 
-To be updated
 
 <!--
 One Ph.D. (2026 Fall) and one Postdoc position (now) are available in the Department of Health Outcomes and Biomedical Informatics at the University of Florida. I also plan to recruit 1-2 voluntary research assistants/interns in my lab, who are interested in my research and aim to pursue PhD study in the future. The research focuses on applying and developing ML/AI techniques to address biomedical problems, advance precision medicine and improve healthcare. The ultimate goal of our study is to revolutionize the field of biomedicine through cutting-edge AI technologies and to solve practical biomedical problems in the real world. We have extensive research experience in machine learning, data mining, NLP, and their applications in biomedical areas. The students will have significant freedom to explore the research they are interested in. Excellent students in our team will have the chance to visit Harvard University. Students interested in our research are also welcome to reach out to us.
