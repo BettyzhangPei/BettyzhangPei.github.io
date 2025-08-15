@@ -27,3 +27,6 @@ Recent News
 * 2025-05-30: I am excited to give a 3-minute lightning talk in the 17th Annual DCEG Fellows' Training Symposium.
 * 2025-03-22: The paper "Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype" with Paul S. Albert and Hyokyoung G. Hong has been accepted to The Annuals of Applied Statistics.
 
+> 行至水穷处，坐看云起时  
+> —— 宋·苏轼
+
