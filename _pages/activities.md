@@ -32,7 +32,7 @@ author_profile: true
  
  
 <b>Presentations</b>
-- 2026 International Biometrics Conference (IBC), Seoul, South Korea, July 2026 (Invited Speaker)
+<!-- - 2026 International Biometrics Conference (IBC), Seoul, South Korea, July 2026 (Invited Speaker)  -->
 - 2025 Joint Statistical Meetings (JSM), Nashville, Tennessee, USA, August 2025 (Oral Presenter)
 - The 17th Annual NCI-DCEG Fellows' Training Symposium, Rockville, MD, USA, May 2025 (3-Minute Lightning Talk)
 - 2025 Eastern North American Region (ENAR), New Orleans, Louisiana, USA, March 2025 (Attendant)
