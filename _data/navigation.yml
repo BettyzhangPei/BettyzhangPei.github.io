@@ -1,0 +1,44 @@
+# main links links
+main:
+
+#- title: "CV"
+#    url: /cv/
+
+  - title: "Publications"
+    url: /publications/
+    
+  - title: "Awards"
+    url: /awards/  
+
+  - title: "Activities"
+    url: /activities/ 
+
+  - title: "Teaching"
+    url: /teaching/  
+
+  - title: "Team"
+    url: /team/
+  
+  - title: "Gallery"
+    url: /gallery/
+    
+  - title: "Join us"
+    url: /join us/
+    
+ # - title: "Contact"
+ #   url: /contact/
+
+#  - title: "Talks"
+#    url: /talks/    
+
+  
+    
+#  - title: "Portfolio"
+#    url: /portfolio/
+        
+#  - title: "Blog Posts"
+#    url: /year-archive/
+    
+    
+#  - title: "Guide"
+#    url: /markdown/
