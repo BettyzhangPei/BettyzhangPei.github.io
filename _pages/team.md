@@ -5,6 +5,7 @@ permalink: /team/
 author_profile: true
 ---
 
+<!-- 
 <b>Postdoc</b> 
 - Qiang Yang  (2024 - present)  
   Ph.D. from King Abdullah University of Science and Technology
@@ -48,4 +49,7 @@ author_profile: true
 - <b>Viet Hung Tran,</b> Hanoi University of Science & Technology, Hanoi, Vietnam, 2017-2018 (Now Research Assistant at Singapore University of Technology and Design) 
 - <b>Chew Li Ting Chery,</b> Nanyang Technological University, Singapore, 2016-2017   
 - <b>Tan Jun Qiu,</b> Nanyang Technological University, Singapore, 2016-2017 (Now Application Security Architect at Prudential)  
-- <b>Ho Wei Shen,</b> Nanyang Technological University, Singapore, 2016-2017 (Now Senior Software Engineer)
+- <b>Ho Wei Shen,</b> Nanyang Technological University, Singapore, 2016-2017 (Now Senior Software Engineer)  -->
+
+<!-- You can show a short placeholder instead -->
+*Team will be announced soon. Please check back later.*
