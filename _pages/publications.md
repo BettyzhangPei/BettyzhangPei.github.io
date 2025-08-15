@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-Please find the most recent articles on my<a href="https://scholar.google.com/citations?user=MZigJDUAAAAJ&hl=en"> Google Scholar profile</a>
+Please find the most recent articles on my<a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ&hl=en"> Google Scholar profile</a>
 
 <font size="5"><b>2023</b></font>
 -	Zhou, Z., Glanz, Z., Liu, M., Bian, J., Yin, R.\*, Gao, H.\* (2023). HSELDA: Heterogeneous Sub-Graph Learning for lncRNA-Disease Associations Prediction. 2023 IEEE International Conference on Bioinformatics and Biomedicine. (Accepted)
