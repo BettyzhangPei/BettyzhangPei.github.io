@@ -7,7 +7,7 @@ author_profile: true
 
 <b>TEACHING EXPERIENCE</b>
 
-University of Maryland, College Park
+University of Maryland, College Park 
 Occupation: Teaching Assistant
 Period: August 2019- August 2021
 Courses: 
