@@ -5,7 +5,6 @@ permalink: /gallery/
 author_profile: true
 ---
 
-
-
-To be updated
+<!-- You can show a short placeholder instead -->
+*Gallery will be announced soon. Please check back later.*
 
