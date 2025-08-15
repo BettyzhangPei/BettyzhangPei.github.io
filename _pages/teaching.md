@@ -5,10 +5,27 @@ permalink: /teaching/
 author_profile: true
 ---
 
-<b>Teaching courses</b>
-- Foundation of Biomedical Informatics (2025 Fall, lecturer)
-- Information Modeling in Biomedicine (2024 Spring, 2025 Spring, lecturer)
-- Introduction to Data Science and Artificial Intelligence (2019 Fall, teaching assistant)   
-- Computer Architecture (2019 Spring, teaching assistant)  
-- Computational Biology (2018 Spring, teaching assistant)  
-- Data Mining (2017 Fall, 2018 Fall, teaching assistant)  
+<b>TEACHING EXPERIENCE</b>
+
+University of Maryland, College Park
+Occupation: Teaching Assistant
+Period: August 2019- August 2021
+Courses: 
+- MATH240   Introduction to Linear Algebra
+- MATH310   Introduction to Mathematical Proof 
+- STAT410   Introduction to Probability Theory
+- STAT100   Elementary Probability and Statistics
+- STAT440   Sampling Theory
+- STAT100   Elementary Statistics and Probability
+  
+University of Science and Technology of China
+Occupation: Teaching Assistant 
+Period: March 2015 - June 2016
+Courses: 
+- Calculus I
+- Calculus II
+
+NO.1 Middle School Affiliated to Central China Normal University (Top 1 Middle School in China, 2016)
+Occupation: Math Teacher
+Period: September 2016 - March 2017
+ 
