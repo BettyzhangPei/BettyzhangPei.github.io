@@ -14,3 +14,6 @@ Please find the most recent articles on my<a href="https://scholar.google.com/ci
 
 ## 2023
 - Yetian Wu\#, **Pei Zhang**\#, Hongjie Fan, Caiying Zhang, Pengfei Yu, Xinmiao Liang, Yang Chen\*. *GPR35 acts a dual role and therapeutic target in inflammation*, **Frontiers in Immunology**, 2023, 14, 1254446.
+
+
+**Notes:** \# equal contribution, \* corresponding author
