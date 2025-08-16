@@ -18,7 +18,7 @@ My research lies at the intersection of statistics and public health, with the g
 
 Hobbies
 ==========
-Beyond research, I enjoy hiking, kayaking, and exploring new places and restaurants. I’m an avid reader, especially of books on art, aesthetics, and eastern philosophy, and I maintain a regular meditation practice to stay grounded.
+Beyond research, I enjoy hiking, kayaking, skiing and exploring new places and restaurants. I’m an avid reader, especially of books on art, aesthetics, and eastern philosophy, and I maintain a regular meditation practice to stay grounded.
 
 Recent News
 ===========
