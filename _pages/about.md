@@ -18,7 +18,7 @@ My research lies at the intersection of statistics and public health, with the g
 * statistical and computational methodologies for electronic health records (EHR), real-world data (RWD) and large-scale studies, with a focus on genetic data analysis for personalized, early detection of prostate cancer;
 * application of statistical methods, including machine learning and deep learning, to cancer genetic epidemiology, nutritional research, and metabolomics etc.
 
-<b>Hobbiess</b>
+<b>Hobbies</b>
 
 Beyond research, I enjoy hiking, kayaking, skiing and exploring new places and restaurants. I’m an avid reader, especially of books on art, aesthetics, and eastern philosophy, and I maintain a regular meditation practice to stay grounded.
 
