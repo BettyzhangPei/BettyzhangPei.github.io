@@ -46,7 +46,7 @@ author_profile: true
 
 <figure>
   <img src="/images/amata.JPG" alt="Meditation at Amata" style="max-width:70%;">
-  <figcaption><em>Meditation Retreat at Amata, 2025</em></figcaption>
+  <figcaption><em>Meditation Retreat at Amata, 2024</em></figcaption>
 </figure>
 
 
