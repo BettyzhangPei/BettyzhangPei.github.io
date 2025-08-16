@@ -29,10 +29,10 @@ author_profile: true
   <figcaption><em>Commencement Ceremony with My Primary Mentors: Paul S. Albert (left) and Doron Levy (right), May 21, 2025</em></figcaption>
 </figure>
 
-<!-- <figure>
+ <figure>
   <img src="/images/defense.JPG" alt="Dissertation Defense" style="max-width:70%;">
   <figcaption><em>Ph.D. Dissertation Defense with Committee Members, Feb 4, 2025</em></figcaption>
-</figure>-->
+</figure>
 
 <figure>
   <img src="/images/vail.JPG" alt="Skiing at Vail" style="max-width:70%;">
