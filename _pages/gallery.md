@@ -8,4 +8,4 @@ author_profile: true
 <!-- You can show a short placeholder instead -->
 *Gallery will be announced soon. Please check back later.*
 
-![Photo of commencement](/images/commencement.png)
+![Photo of commencement](/images/commencement.JPG)
