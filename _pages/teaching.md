@@ -4,6 +4,7 @@ title: " "
 permalink: /teaching/
 author_profile: true
 ---
+<h3 style="margin-top:0;">Teaching Experience</h3>
 
 <b>University of Maryland, College Park</b>
 - **Role:** Teaching Assistant  
