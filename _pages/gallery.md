@@ -44,4 +44,10 @@ author_profile: true
   <figcaption><em>Hiking at Yellowstone, 2025</em></figcaption>
 </figure>
 
+<figure>
+  <img src="/images/amata.JPG" alt="Meditation at Amata" style="max-width:70%;">
+  <figcaption><em>Meditation Retreat at Amata, 2025</em></figcaption>
+</figure>
+
+
 </div>
