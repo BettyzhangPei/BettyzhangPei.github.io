@@ -29,5 +29,5 @@ Beyond research, I enjoy hiking, kayaking, skiing and exploring new places and r
 * 2025-03-22: The paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* with Paul S. Albert and Hyokyoung G. Hong has been accepted to **The Annuals of Applied Statistics**.
 
 
-![Calligraphy of 行至水穷处，坐看云起时 — 宋·苏轼](/images/calligraphy.png)
+![Calligraphy of 行至水穷处，坐看云起时 — 唐·王维](/images/calligraphy.png)
 
