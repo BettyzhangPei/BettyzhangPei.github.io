@@ -31,7 +31,7 @@ author_profile: true
 
 <figure>
   <img src="/images/defense.JPG" alt="Dissertation Defense" style="max-width:70%;">
-  <figcaption><em>Dissertation Defense with Committee Members, Feb 4, 2025</em></figcaption>
+  <figcaption><em>Ph.D. Dissertation Defense with Committee Members, Feb 4, 2025</em></figcaption>
 </figure>
 
 <figure>
