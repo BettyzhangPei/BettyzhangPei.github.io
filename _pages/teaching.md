@@ -1,11 +1,9 @@
 ---
 layout: archive
-title: "Teaching"
+title: "Teaching Experience"
 permalink: /teaching/
 author_profile: true
 ---
-
-## Teaching Experience
 
 ### University of Maryland, College Park
 - **Role:** Teaching Assistant  
