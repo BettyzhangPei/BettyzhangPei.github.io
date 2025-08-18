@@ -30,13 +30,6 @@ Beyond research, I enjoy hiking, kayaking, skiing and exploring new places and r
 
 
 
-<figure style="margin:1.25rem 0; text-align:center;">
-  <img src="/images/calligraphy.png"
-       alt="行至水窮處，坐看雲起時（王維）"
-       loading="lazy" decoding="async"
-       style="max-width:680px; width:100%; height:auto;">
-  <figcaption style="font-size:.9rem; color:#666; margin-top:.5rem;">
-    行至水窮處，坐看雲起時 — 王維
-  </figcaption>
-</figure>
+![行至水窮處，坐看雲起時（王維）](/images/calligraphy.png){: width="360" }
+
 
