@@ -16,10 +16,10 @@ author_profile: true
 ![Photo of defense](/images/defense.JPG)
 
 
-*First "Skiing" at Vail Ski Resort, Denver, 2024*
+*First "Skiing" at Vail Ski Resort, Denver, Colorado, 2024*
 ![Photo of ski](/images/vail.JPG)
 
-*Hiking at Yellowstone, 2025*
+*Hiking at Yellowstone National Park, 2025*
 ![Photo of yellowstone](/images/yellowstone.jpg)-->
 
 <div style="text-align:center;">
@@ -36,12 +36,12 @@ author_profile: true
 
 <figure>
   <img src="/images/vail.JPG" alt="Skiing at Vail" style="max-width:70%;">
-  <figcaption><em>First "Skiing" at Vail Ski Resort, Denver, Feb 2024</em></figcaption>
+  <figcaption><em>First "Skiing" at Vail Ski Resort, Denver, Colorado, Feb 2024</em></figcaption>
 </figure>
 
 <figure>
   <img src="/images/yellowstone.jpg" alt="Hiking at Yellowstone" style="max-width:70%;">
-  <figcaption><em>Hiking at Yellowstone, July 2025</em></figcaption>
+  <figcaption><em>Hiking at Yellowstone National Park, July 2025</em></figcaption>
 </figure>
 
 <!--<figure>
