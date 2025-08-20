@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my website!
+<h3 style="margin-top:0;">Welcome to my website!</h3> 
 
 <h3 style="margin-top:0;">About Me</h3>
 
