@@ -25,10 +25,10 @@ author_profile: true
 
 
 <b>Journal Reviewer</b> 
-- Biometrics (1)
-- Statistics in Medicine (1)
-- Journal of Biopharmaceutical Statistics
-- Frontiers in Oncology (1)
+- [Biometrics](https://academic.oup.com/biometrics)
+- [Statistics in Medicine](https://onlinelibrary.wiley.com/journal/10970258)
+- [Journal of Biopharmaceutical Statistics](https://www.tandfonline.com/journals/lbps20)
+- [Frontiers in Oncology](https://www.frontiersin.org/journals/oncology)
  
  
 <b>Presentations</b>
