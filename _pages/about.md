@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-<h3 style="margin-top:0;">Welcome to my website!</h3> 
-
 <b>About Me</b>
 
 I am currently a Postdoctoral Fellow in the Biostatistics Branch, Division of Cancer Epidemiology and Genetics (DCEG), National Cancer Institute (NCI), National Institutes of Health (NIH), working with Senior Principle Investigators [Paul S. Albert](https://dceg.cancer.gov/about/staff-directory/albert-paul) and [Jianxin Shi](https://dceg.cancer.gov/about/staff-directory/shi-jianxin). I earned my Ph.D. in Mathematical Statistics in 2025 from University of Maryland, College Park (UMCP) and was honored to be advised by Prof. [Doron Levy](https://math.umd.edu/~dlevy/), Senior Investigators [Paul S. Albert](https://dceg.cancer.gov/about/staff-directory/albert-paul), [Jianxin Shi](https://dceg.cancer.gov/about/staff-directory/shi-jianxin) and [Hyokyoung G. Hong](https://dceg.cancer.gov/about/staff-directory/hong-grace) under the NIH Graduate Partnerships Program (GPP). Prior to UMCP, I obtained my Master’s degree in Mathematics in 2016 from University of Science and Technology of China (USTC) and was honored to be mentored by Prof. [Xinan Ma](http://staff.ustc.edu.cn/~xinan/), and my Bachelor’s degree in Mathematics and Applied Mathematics in 2014 from Nanjing Normal University (NNU).
