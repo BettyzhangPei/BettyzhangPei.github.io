@@ -10,7 +10,9 @@ author_profile: true
 - NIH Outstanding Graduate Research, USA, 2025
 - Women in Statistics and Data Science Conference Student Travel Award (twice), USA, 2023 - 2024
 - UMCP Jacob K. Goldhaber Travel Grant, USA, 2023
+- UMCP International Conference Student Support Award, USA, 2023
 - UMCP Graduate Student Travel Fellowship (twice), USA, 2022 - 2023
+- Rutgers University Travel Award for Conference on Advances in Bayesian and Frequentist Statistics, USA, 2022
 - UMCP Tuition Award for External Fellowship (4 times), USA, 2021 - 2024
 - UMCP Dean’s Fellowship (twice), USA, 2019 - 2020
 - First Award in Thesis Contest on Deep Integration of Key Competence and Classroom Teaching, China, 2017
