@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Homepage"
+title                    : "Pei Zhang (章佩)"
 title_separator          : "-"
 name                     : &name "Pei Zhang"
 description              : &description "personal description"
