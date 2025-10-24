@@ -20,7 +20,7 @@ My research lies at the intersection of statistics and public health, with the g
 
 <b>Hobbies</b>
 
-Beyond research, I enjoy hiking, kayaking, skiing and exploring new places and restaurants. I’m an avid reader, especially of books on art, aesthetics, and eastern philosophy, and I maintain a regular meditation practice to stay grounded.
+Beyond research, I enjoy hiking, kayaking, skiing, swimming, playing badminton and exploring new places and restaurants. I’m an avid reader, especially of books on art, aesthetics, and eastern philosophy, and I maintain a regular meditation practice to stay grounded.
 
 <b>Recent News</b>
 * 2025-08-03: I presented [our work about genetic insights in PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi and Paul S. Albert) at **Joint Statistical Meetings (JSM) 2025**.
