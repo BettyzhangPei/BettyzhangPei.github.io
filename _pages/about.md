@@ -24,7 +24,7 @@ Beyond research, I enjoy hiking, kayaking, skiing, swimming, playing badminton a
 
 <b>Recent News</b>
 * 2026-07-12: I will present [our work about genetic contribution to longitudinal phenotypes](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi and Paul S. Albert) at **International Biometric Conference (IBC) 2026** in Seoul, Republic of Korea. 
-* 2025-08-03: I presented [our work about genetic insights in PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi and Paul S. Albert) at **Joint Statistical Meetings (JSM) 2025** in Nashville, United States. 
+* 2025-08-03: I presented [our work about genetic insights into PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi and Paul S. Albert) at **Joint Statistical Meetings (JSM) 2025** in Nashville, United States. 
 * 2025-07-08: I am hornored to be a winner of **NIH Fellows Award for Research Excellence (FARE) 2026** Competition (top 25 percent of all applicants). 
 * 2025-05-30: I am excited to give a 3-minute lightning talk in the **17th Annual DCEG Fellows' Training Symposium**.
 * 2025-03-22: The paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* with Paul S. Albert and Hyokyoung G. Hong has been accepted to **Annals of Applied Statistics**.
