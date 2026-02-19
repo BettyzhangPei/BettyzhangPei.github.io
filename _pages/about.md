@@ -51,6 +51,7 @@ I also love exploring new places and restaurants (statistical sampling, but for 
 * **2025-05-30:** Gave a 3-minute lightning talk at the **17th Annual DCEG Fellows' Training Symposium** — possibly the fastest I have ever spoken about statistics.
 * **2025-03-22:** Our paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* (with Paul S. Albert and Hyokyoung G. Hong) was accepted by **Annals of Applied Statistics**.
 
+---
 
 <img src="/images/calligraphy.png"
      alt="行至水窮處，坐看雲起時（王維）"
