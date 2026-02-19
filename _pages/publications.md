@@ -13,7 +13,7 @@ Please find the most recent articles on my<a href="https://scholar.google.com/ci
 
 <b>2025</b>
 -	**Pei Zhang**, Paul S. Albert\*, Hyokyoung G. Hong\*, *Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype*, **Annals of Applied Statistics**, 2025, 19 (3): 2070 – 2087. (Acceptance Rate: 20%)
--	Erikka Loftfiled<sup>#</sup>\*, **Pei Zhang**<sup>#</sup>, Caitlin P. O’ Connell, Lisa L. Kahle, Kirsten Herrick, Leila Abar, Neha Khandpur, Euridice Martinez Steele, Hyokyoung G. Hong, *Performance of a food frequency questionnaire for estimating ultra-processed food intake according to the Nova classification system in the US NIH-AARP Diet and Health Study*, **The Journal of Nutrition**, 2025, 155 (7): 2376 - 2384.
+-	Erikka Loftfiled<sup>#</sup>\*, **Pei Zhang**<sup>#</sup>, Caitlin P. O’ Connell, Lisa L. Kahle, Kirsten Herrick, Leila Abar, Neha Khandpur, Euridice Martinez Steele, Hyokyoung G. Hong, *Performance of a food frequency questionnaire for estimating ultra-processed food intake according to the Nova classification system in the US NIH-AARP Diet and Health Study*, **Journal of Nutrition**, 2025, 155 (7): 2376 - 2384.
 - Hongjie Fan, Huzi Zhao, Lili Gao, Yucheng Dong, **Pei Zhang**, Pengfei Yu, Yunfei Ji, Zhe-Sheng Chen, Xinmiao Liang\*, Yang Chen\*. *CCN1 enhances tumor immunosuppression through collagen-mediated chemokine secretion in pancreatic cancer*, **Advanced Science**, 2025, e2500589.
 
 <b>2023</b>
