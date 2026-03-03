@@ -37,7 +37,7 @@ I am especially motivated by problems where rigorous methodology meets real-worl
 
 <b>Hobbies</b>
 
-Beyond research, I enjoy spending time outdoors — hiking, kayaking, skiing, swimming, and playing badminton. If it involves fresh air or movement, I’m usually in.
+Beyond research, I enjoy spending time outdoors — hiking, kayaking, skiing, swimming, dancing and playing badminton. If it involves fresh air or movement, I’m usually in.
 
 I also love exploring new places and restaurants (statistical sampling, but for food). I’m an avid reader, particularly books on art, aesthetics, and Eastern philosophy, and I maintain a regular meditation practice to stay grounded — which turns out to be quite helpful when models refuse to converge.
 
