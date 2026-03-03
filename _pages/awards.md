@@ -9,12 +9,12 @@ author_profile: true
 - NIH Fellows Award for Research Excellence (FARE) (top 25% of all applicants), USA, 2025
 - NIH Outstanding Graduate Research, USA, 2025
 - Women in Statistics and Data Science Conference Student Travel Award (twice), USA, 2023 - 2024
-- UMCP Jacob K. Goldhaber Travel Grant, USA, 2023
-- UMCP International Conference Student Support Award, USA, 2023
-- UMCP Graduate Student Travel Fellowship (twice), USA, 2022 - 2023
+- UMD Jacob K. Goldhaber Travel Grant, USA, 2023
+- UMD International Conference Student Support Award, USA, 2023
+- UMD Graduate Student Travel Fellowship (twice), USA, 2022 - 2023
 - Rutgers University Travel Award for Conference on Advances in Bayesian and Frequentist Statistics, USA, 2022
-- UMCP Tuition Award for External Fellowship (4 times), USA, 2021 - 2024
-- UMCP Dean’s Fellowship (twice), USA, 2019 - 2020
+- UMD Tuition Award for External Fellowship (4 times), USA, 2021 - 2024
+- UMD Dean’s Fellowship (twice), USA, 2019 - 2020
 - First Award in Thesis Contest on Deep Integration of Key Competence and Classroom Teaching, China, 2017
 - USTC Outstanding Graduate,China, 2016  
 - USTC First Award of Academic Scholarship (twice), China, 2014 - 2015        
