@@ -8,11 +8,11 @@ author_profile: true
 <!-- You can show a short placeholder instead -->
 <!--*Gallery will be announced soon. Please check back later.* -->
 
-<!-- *Commencement Ceremony with My Primary Mentors: Paul S. Albert (left) and Doron Levy (right), May 21, 2025*
+<!-- *Commencement Ceremony with My Primary Mentors: Paul S. Albert, PhD (left) and Doron Levy, PhD (right), May 21, 2025*
 ![Photo of commencement](/images/commencement.JPG)
 
 
-*Dissertation Defense with Committee Members, Feb 4, 2025*
+*Dissertation Defense with Committee Members (Drs. Doron Levy, Hyokyoung "Grace" Hong, Lizhen Lin, Yan Li, Paul S. Albert), Feb 4, 2025*
 ![Photo of defense](/images/defense.JPG)
 
 
