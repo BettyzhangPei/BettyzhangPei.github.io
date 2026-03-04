@@ -27,9 +27,9 @@ My research sits at the intersection of statistics and public health. I am broad
 
 More specifically, I work on:
 
-* Statistical modeling for correlated biomedical outcomes, including **longitudinal data analysis**, diagnostic testing, and biomarker studies (where the data are often messy, dependent, and fascinating).
-* Statistical and computational methods for electronic health records (EHR), real-world data (RWD), and large-scale population studies (e.g., the PLCO Cancer Screening Trial), with a particular focus on **genetic data analysis** for precision risk stratification and early detection of **prostate cancer**.
-* Applications of statistical methods — including **machine learning (ML), deep learning and large language models (LLMs)** — to cancer genetic epidemiology, nutritional research, and metabolomics. 
+* **Statistical modeling for correlated biomedical outcomes**, including longitudinal analysis of repeated measurements, diagnostic testing, and biomarker studies, where data are often complex, dependent, and high-dimensional.
+* **Statistical and computational methods in genetics and genomics** for analyzing electronic health records (EHR), real-world data (RWD), and large-scale population studies (e.g., the Prostate, Lung, Colorectal, and Ovarian (PLCO) Cancer Screening Trial), with particular emphasis on genome-wide analyses for precision risk stratification, early detection, and risk prediction of prostate cancer.
+* **Statistical and machine learning approaches in epidemiologic research**, including machine learning (ML), deep learning, and large language models (LLMs), with applications in cancer genetic epidemiology, nutritional epidemiology, and metabolomics.
 
 I am especially motivated by problems where rigorous methodology meets real-world clinical impact.
 
