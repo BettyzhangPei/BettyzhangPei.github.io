@@ -8,7 +8,7 @@ author_profile: true
 <!-- You can show a short placeholder instead -->
 <!--*Gallery will be announced soon. Please check back later.* -->
 
-<!-- *Commencement Ceremony with My Primary Mentors: Paul S. Albert, PhD (left) and Doron Levy, PhD (right), May 21, 2025*
+<!-- *Commencement Ceremony with My Primary Mentors: Drs. Paul S. Albert (left) and Doron Levy (right), May 21, 2025*
 ![Photo of commencement](/images/commencement.JPG)
 
 
