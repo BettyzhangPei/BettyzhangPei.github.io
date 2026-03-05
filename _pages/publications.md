@@ -7,9 +7,10 @@ author_profile: true
 
 Please find the most recent articles on my<a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ&hl=en"> Google Scholar profile</a>
 
-<b>2025+</b>
--	**Pei Zhang**, Xiaoyu Wang, Jianxin Shi\*, Paul S. Albert\*, *Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals*, **Biostatistics**, Under Second-Round Review.
+<b>2026</b>
 -	Jungeun Lim, **Pei Zhang**, Jongeun Rhee, Mary C. Playdon, Amanda J Cross, Rachael Stolzenberg-Solomon, Véronique L. Roger, Mark P. Purdue, Demetrius Albanes\*, Hyokyoung G. Hong\*, Jason Y.Y. Wong\*,   *Metabolomic profile score for predicting serum per- and polyfluoroalkyl substance (PFAS) levels: a novel application of machine learning to enhance detection of environmental pollutants*, Under Review.
+-	**Pei Zhang**, Xiaoyu Wang, Jianxin Shi\*, Paul S. Albert\*, *Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals*, **Biostatistics**, Under Second-Round Review (minor revision).
+-	Hongjie Fan, Huzi Zhao, **Pei Zhang**, Pengfei Yu, Yunfei Ji, Gang Chen, Hongli Jin, Yanfang Liu, Jin Liu, Zhe-Sheng Chen, Aiping Lyu\*, Xinmiao Liang\*, Yang Chen\*, *Homoisoflavanone Delays Colorectal Cancer Progression via DNA Damage-Induced Mitochondrial Apoptosis and Parthanatos-Like Cell Death*, **Advanced Science**, 2026, e11406.
 
 <b>2025</b>
 -	**Pei Zhang**, Paul S. Albert\*, Hyokyoung G. Hong\*, *Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype*, **Annals of Applied Statistics**, 2025, 19 (3): 2070 – 2087. (Acceptance Rate: 20%)
