@@ -47,7 +47,7 @@ I also love exploring new places and restaurants (statistical sampling, but for 
 
 * **2026-07-12:** I will present our work on [heritability analysis for longitudinal phenotypes](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **International Biometric Conference (IBC) 2026** in Seoul, Republic of Korea.
 * **2026-03:** Honored to serve as a committee member for the **NIH Fellows Award for Research Excellence (FARE) 2027**.
-* **2025-08-03:** I presented our work on [genetic insights into PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **Joint Statistical Meetings (JSM) 2025** in Nashville, United States.
+* **2025-08-03:** Presented our work on [genetic insights into PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **Joint Statistical Meetings (JSM) 2025** in Nashville, United States.
 * **2025-07-08:** Honored to receive the **NIH Fellows Award for Research Excellence (FARE) 2026** (top 25% of all applicants).
 * **2025-05-30:** Gave a 3-minute lightning talk at the **17th Annual DCEG Fellows' Training Symposium**—possibly the fastest I have ever spoken about statistics.
 * **2025-03-22:** Our paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* (with Paul S. Albert and Hyokyoung G. Hong) was accepted by **Annals of Applied Statistics**.
