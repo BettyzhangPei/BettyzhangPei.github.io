@@ -68,7 +68,7 @@ Service and leadership
 ======
 * Reviewer
    * Journal:
-      * Statistics in Medicine (1)
+      * Statistics in Medicine (2)
       * Biometrics (1)
       * Journal of Biopharmaceutical Statistics (1)
       * Frontiers in Oncology (1)
