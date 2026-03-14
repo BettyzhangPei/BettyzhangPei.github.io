@@ -17,7 +17,7 @@ I earned my Ph.D. in Mathematical Statistics (2025) from the [University of Mary
 
 Before UMD, I received my Master’s degree in Mathematics (2016) from the [University of Science and Technology of China (USTC)](https://en.ustc.edu.cn), mentored by Profs. [Xinan Ma](http://staff.ustc.edu.cn/~xinan/) and [Hui Liu](https://www.researchgate.net/profile/Hui-Liu-244). I completed my Bachelor’s degree in Mathematics and Applied Mathematics (2014) at [Nanjing Normal University (NNU)](https://www.njnu.edu.cn), under the guidance of Prof. [Yujun Dong](https://www.researchgate.net/scientific-contributions/Dong-Yujun-2010657826).
 
-In short: I have been happily doing math for quite a while now — and somehow it keeps getting more interesting. 😊
+In short: I have been happily doing math for quite a while now—and somehow it keeps getting more interesting. 😊
 
 ---
 
