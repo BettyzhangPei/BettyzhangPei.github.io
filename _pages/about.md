@@ -41,6 +41,10 @@ Beyond research, I enjoy staying active and spending time outdoors—hiking, cam
 
 I also love exploring new places and restaurants (statistical sampling, but for food). I’m an avid reader, particularly books on art, aesthetics, and Eastern philosophy, and I maintain a regular meditation practice to stay grounded—which turns out to be quite helpful when models refuse to converge.
 
+In addition, I have a deep appreciation for classical music and the performing arts. I enjoy attending symphony concerts and opera performances, and I occasionally play the Guzheng, a traditional Chinese string instrument.
+
+I also enjoy writing as a way to reflect on daily life and express my thoughts and feelings, particularly my appreciation for beauty and the subtle grace of imperfection (*wabi-sabi*).
+
 ---
 
 <b>Recent News</b>
