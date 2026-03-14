@@ -6,7 +6,8 @@ author_profile: true
 ---
 
 <b>Awards and honors (selected) </b>
-- NIH Fellows Award for Research Excellence (FARE) (top 25% of all applicants), USA, 2025
+- Institute of Mathematical Statistics (IMS) New Researcher Travel Award, USA, 2026
+-  NIH Fellows Award for Research Excellence (FARE) (top 25% of all applicants), USA, 2025
 - NIH Outstanding Graduate Research, USA, 2025
 - Women in Statistics and Data Science Conference Student Travel Award (twice), USA, 2023 - 2024
 - UMD Jacob K. Goldhaber Travel Grant, USA, 2023
