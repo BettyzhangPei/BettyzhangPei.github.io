@@ -16,14 +16,14 @@ main:
   - title: "Teaching"
     url: /teaching/  
 
-  - title: "Team"
-    url: /team/
+ # - title: "Team"
+ #   url: /team/
   
   - title: "Gallery"
     url: /gallery/
     
-  - title: "Join us"
-    url: /join us/
+ # - title: "Join us"
+ #   url: /join us/
     
  # - title: "Contact"
  #   url: /contact/
