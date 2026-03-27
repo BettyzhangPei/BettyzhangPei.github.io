@@ -44,6 +44,7 @@ I also love exploring new places and restaurants (statistical sampling, but for 
 In addition, I have a deep appreciation for classical music and the performing arts. I enjoy attending symphony concerts and opera performances, and I occasionally play the Guzheng, a traditional Chinese string instrument.
 
 I also enjoy writing as a way to reflect on daily life and express my thoughts and feelings, particularly my appreciation for beauty and the subtle grace of imperfection (*wabi-sabi*). I also enjoy card games and painting—one grounded in strategy, the other in quiet creativity.
+
 ---
 
 <b>Recent News</b>
