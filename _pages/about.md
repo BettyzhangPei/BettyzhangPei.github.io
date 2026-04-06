@@ -50,13 +50,13 @@ I also enjoy writing as a way to reflect on daily life and express my thoughts a
 <b>Recent News</b>
 
 * **2026-07:** I will present our work on [heritability analysis for longitudinal phenotypes](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **International Biometric Conference (IBC) 2026** in Seoul, South Korea.
-* **2026-04:** Thrilled to announce that our paper, [*Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals*](https://arxiv.org/abs/2505.04773), has been accepted for publication in the **Biostatistics**. 
+* **2026-04:** Thrilled to announce that our paper, [Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals](https://arxiv.org/abs/2505.04773), has been accepted for publication in the *Biostatistics*. 
 * **2026-03:** Honored to receive the **Institute of Mathematical Statistics (IMS) New Researchers Travel Award** and the **National Science Foundation (NSF) Travel Support Award**.
 * **2026-03:** Honored to serve as a committee member for the **NIH Fellows Award for Research Excellence (FARE) 2027**.
 * **2025-08-03:** Presented our work on [genetic insights into PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **Joint Statistical Meetings (JSM) 2025** in Nashville, Tennessee, United States of America.
 * **2025-07-08:** Honored to receive the **NIH Fellows Award for Research Excellence (FARE) 2026** (top 25% of all applicants).
 * **2025-05-30:** Gave a 3-minute lightning talk at the **17th Annual DCEG Fellows' Training Symposium**—possibly the fastest I have ever spoken about statistics.
-* **2025-03-22:** Our paper [*Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype*](https://pubmed.ncbi.nlm.nih.gov/40893136/) (with Paul S. Albert and Hyokyoung G. Hong) has been accepted by **Annals of Applied Statistics**.
+* **2025-03-22:** Our paper [Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype](https://pubmed.ncbi.nlm.nih.gov/40893136/) (with Paul S. Albert and Hyokyoung G. Hong) has been accepted for publication in the *Annals of Applied Statistics*.
 * **2025-02-13:** Honored to receive the **NIH Outstanding Graduate Research Certificate**. 
 
 ---
