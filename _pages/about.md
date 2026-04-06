@@ -56,7 +56,7 @@ I also enjoy writing as a way to reflect on daily life and express my thoughts a
 * **2025-08-03:** Presented our work on [genetic insights into PSA velocity](https://arxiv.org/abs/2505.04773) (with Xiaoyu Wang, Jianxin Shi, and Paul S. Albert) at the **Joint Statistical Meetings (JSM) 2025** in Nashville, Tennessee, United States of America.
 * **2025-07-08:** Honored to receive the **NIH Fellows Award for Research Excellence (FARE) 2026** (top 25% of all applicants).
 * **2025-05-30:** Gave a 3-minute lightning talk at the **17th Annual DCEG Fellows' Training Symposium**—possibly the fastest I have ever spoken about statistics.
-* **2025-03-22:** Our paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* (with Paul S. Albert and Hyokyoung G. Hong) was accepted by **Annals of Applied Statistics**.
+* **2025-03-22:** Our paper *"Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype"* (with Paul S. Albert and Hyokyoung G. Hong) has been accepted by **Annals of Applied Statistics**.
 * **2025-02-13:** Honored to receive the **NIH Outstanding Graduate Research Certificate**. 
 
 ---
