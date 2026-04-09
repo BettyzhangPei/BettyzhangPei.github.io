@@ -55,7 +55,7 @@ I also enjoy writing as a way to reflect on daily life and express my thoughts a
 * **2026-03:** Honored to receive the **Institute of Mathematical Statistics (IMS) New Researchers Travel Award** and the **National Science Foundation (NSF) Travel Support Award**.
 * **2026-03:** Honored to serve as a committee member for the **NIH Fellows Award for Research Excellence (FARE) 2027**.
 * **2025-07-08:** Honored to receive the **NIH Fellows Award for Research Excellence (FARE) 2026** (top 25% of all applicants).
-* **2025-03-22:** Our paper [Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype](https://pubmed.ncbi.nlm.nih.gov/40893136/) (with Paul S. Albert and Hyokyoung G. Hong) has been accepted for publication in the *Annals of Applied Statistics*.
+* **2025-03-22:** Thrilled to announce that our paper, [Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype](https://pubmed.ncbi.nlm.nih.gov/40893136/) (with Paul S. Albert and Hyokyoung G. Hong),  has been accepted for publication in the *Annals of Applied Statistics*.
 
 ---
 
