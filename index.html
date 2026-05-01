@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pei Zhang</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; color: #222; background: #fff; line-height: 1.75; }
+  a { color: #6b1a3a; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; }
+  nav .sitename { font-size: 15px; color: #222; font-family: -apple-system, sans-serif; }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav ul li a { font-size: 14px; color: #555; font-family: -apple-system, sans-serif; }
+  nav ul li a:hover, nav ul li a.active { color: #222; text-decoration: none; font-weight: 600; }
+
+  .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
+  .page.active { display: block; }
+
+  /* HOME */
+  .home-name { font-size: 42px; font-weight: normal; color: #6b1a3a; margin-bottom: 2.5rem; }
+  .home-body { display: flex; gap: 3rem; align-items: flex-start; }
+  .home-text { flex: 1; font-size: 16px; color: #222; }
+  .home-text p + p { margin-top: 1em; }
+  .home-photo { width: 240px; flex-shrink: 0; }
+  .photo-placeholder { width: 240px; height: 300px; background: #e8d5dc; border-radius: 2px; display: flex; align-items: center; justify-content: center; color: #6b1a3a; font-size: 13px; font-family: -apple-system, sans-serif; text-align: center; padding: 1rem; }
+  .contact-list { margin-top: 1.4rem; font-size: 14px; font-family: -apple-system, sans-serif; color: #444; }
+  .contact-list div { margin-bottom: 4px; }
+  .contact-list a { color: #6b1a3a; }
+
+  /* PAGE TITLES */
+  .page-title { font-size: 28px; font-weight: normal; color: #6b1a3a; margin-bottom: 2rem; }
+
+  /* SECTION HEADS */
+  h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+  h2.sh:first-of-type { margin-top: 0; }
+  h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: #555; margin: 1.2rem 0 0.5rem; }
+
+  /* CV ENTRIES */
+  .cv-entry { display: flex; gap: 1.4rem; margin-bottom: 0.9rem; }
+  .cv-year { font-size: 13px; color: #999; font-family: -apple-system, sans-serif; min-width: 110px; padding-top: 3px; flex-shrink: 0; }
+  .cv-detail { font-size: 15px; }
+  .cv-detail strong { font-weight: bold; display: block; line-height: 1.45; }
+  .cv-detail span { font-size: 13.5px; color: #555; font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
+  .cv-detail em { font-size: 13.5px; color: #777; font-family: -apple-system, sans-serif; font-style: italic; display: block; }
+
+  /* PUBLICATIONS */
+  .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid #ddd; }
+  .pub .ptitle { font-size: 15px; }
+  .pub .ptitle a { color: #6b1a3a; }
+  .pub .authors { font-size: 13.5px; color: #444; margin-top: 2px; }
+  .pub .venue { font-size: 13px; color: #888; font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
+  .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #6b1a3a; color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; flex-shrink: 0; }
+
+  /* LINKS */
+  .links-section { margin-bottom: 1.8rem; }
+  .links-section h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin-bottom: 0.6rem; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  .link-row { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; border-bottom: 0.5px solid #f5f5f5; font-family: -apple-system, sans-serif; font-size: 14.5px; }
+  .link-row:last-child { border-bottom: none; }
+  .link-badge { font-size: 11px; background: #f5eaee; color: #6b1a3a; padding: 2px 9px; border-radius: 3px; font-weight: 500; min-width: 110px; text-align: center; flex-shrink: 0; }
+  .link-row a { color: #1a5276; }
+  .link-row .ldesc { color: #888; font-size: 13px; }
+
+  /* GALLERY */
+  .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
+  .gallery-frame { width: 100%; border: none; border-radius: 4px; min-height: 600px; }
+
+  /* FOOTNOTE LEGEND */
+  .legend { font-size: 13px; color: #888; font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
+
+  footer { text-align: center; font-size: 13px; color: #aaa; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="sitename">Pei Zhang</div>
+  <ul>
+    <li><a href="#" class="active" onclick="return show('home',this)">Home</a></li>
+    <li><a href="#" onclick="return show('research',this)">Research</a></li>
+    <li><a href="#" onclick="return show('cv',this)">CV</a></li>
+    <li><a href="#" onclick="return show('links',this)">Links</a></li>
+    <li><a href="#" onclick="return show('gallery',this)">Gallery</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="pg-home">
+  <h1 class="home-name">Pei Zhang</h1>
+  <div class="home-body">
+    <div class="home-text">
+      <p>I am a Postdoctoral Fellow at the Biostatistics Branch (BB), Division of Cancer Epidemiology &amp; Genetics (DCEG), National Cancer Institute (NCI), National Institutes of Health (NIH), mentored by <a href="mailto:albertp@mail.nih.gov">Dr. Paul S. Albert</a> and <a href="mailto:jianxin.shi@nih.gov">Dr. Jianxin Shi</a>.</p>
+      <p>My research develops statistical and computational methods for longitudinal and correlated data, with applications to genetics, genomics, and cancer epidemiology. I focus on mixed modeling approaches for characterizing genetic effects and heritability in longitudinal phenotypes, with applications to prostate cancer risk stratification and early detection.</p>
+      <p>My work spans methodological statistics, statistical genetics, machine learning in epidemiology, and nutritional epidemiology. I have published in leading journals including <em>Biostatistics</em>, <em>Annals of Applied Statistics</em>, <em>Advanced Science</em>, and <em>Journal of Nutrition</em>.</p>
+      <p>I received my Ph.D. in Mathematical Statistics from the University of Maryland, College Park (2025), where I was recognized with the NIH Outstanding Graduate Research award.</p>
+      <div class="contact-list">
+        <div>✉ <a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
+        <div>📍 9609 Medical Center Dr, Room 7E614, Rockville, MD 20850, USA</div>
+        <div>☎ +1 (240) 992-7823</div>
+      </div>
+    </div>
+    <div class="home-photo">
+      <div class="photo-placeholder">Your photo here<br><br><span style="font-size:11px;opacity:0.7;">Replace with &lt;img src="photo.jpg"&gt;</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH -->
+<div class="page" id="pg-research">
+  <h1 class="page-title">Research</h1>
+
+  <h2 class="sh">Research Interests</h2>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Longitudinal &amp; correlated data methodology</strong> <span>Repeated-measures analysis, biomarker studies, and complex dependent data structures.</span></div></div>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; computational methods in genetics and genomics</strong> <span>Electronic health records (EHR), real-world data (RWD), and large-scale population studies (e.g., PLCO Cancer Screening Trial) — prostate cancer risk stratification, early detection, and prediction.</span></div></div>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; machine learning in epidemiology</strong> <span>Cancer genetic epidemiology, nutritional epidemiology, and metabolomics.</span></div></div>
+
+  <h2 class="sh">Publications</h2>
+  <div class="legend">* corresponding author &nbsp;† co-first / equal contribution &nbsp;‡ alphabetical order</div>
+
+  <h3 class="ssh">Methodological / Statistical Papers</h3>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">1</span><a href="#">Estimating the heritability of longitudinal rate-of-change: Genetic insights into PSA velocity in prostate cancer-free individuals</a></div>
+    <div class="authors"><strong>Zhang, Pei</strong>, X. Wang, Shi, Jianxin*, and Albert, Paul S.*</div>
+    <div class="venue">Biostatistics, 2026 (Accepted) &nbsp;·&nbsp; <a href="#">arXiv preprint</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">2</span><a href="#">Mixed modeling approach for characterizing the genetic effects in a longitudinal phenotype</a></div>
+    <div class="authors"><strong>Zhang, Pei</strong>, Albert, Paul S.*, and Hong, Hyokyoung G.*</div>
+    <div class="venue">Annals of Applied Statistics, vol. 19, no. 3, pp. 2070–2087, 2025 &nbsp;·&nbsp; <a href="#">PDF</a></div>
+  </div>
+
+  <h3 class="ssh">Collaborative / Applied Papers</h3>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">1</span><a href="#">Homoisoflavanone delays colorectal cancer progression via DNA damage-induced mitochondrial apoptosis and parthanatos-like cell death</a></div>
+    <div class="authors">H. Fan, H. Zhao, <strong>Zhang, Pei</strong>, P. Yu, Y. Ji, G. Chen, H. Jin, Y. Liu, J. Liu, Z.-S. Chen, Lyu, Aiping*, Liang, Xinmiao*, and Chen, Yang*</div>
+    <div class="venue">Advanced Science, e11406, 2026 &nbsp;·&nbsp; <a href="#">PDF</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">2</span><a href="#">CCN1 enhances tumor immunosuppression through collagen-mediated chemokine secretion in pancreatic cancer</a></div>
+    <div class="authors">H. Fan, H. Zhao, L. Gao, Y. Dong, <strong>Zhang, Pei</strong>, P. Yu, Y. Ji, Z.-S. Chen, X. Liang, and Chen, Yang*</div>
+    <div class="venue">Advanced Science, e2500589, 2025 &nbsp;·&nbsp; <a href="#">PDF</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">3</span><a href="#">Performance of a food frequency questionnaire for estimating ultraprocessed food intake according to the NOVA classification system in the United States NIH-AARP diet and health study</a></div>
+    <div class="authors">Loftfield, Erikka†*, <strong>Zhang, Pei†</strong>, C. P. O'Connell, L. L. Kahle, K. Herrick, L. Abar, N. Khandpur, E. M. Steele, and H. G. Hong</div>
+    <div class="venue">Journal of Nutrition, vol. 155, no. 7, pp. 2376–2384, 2025 &nbsp;·&nbsp; <a href="#">PDF</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">4</span><a href="#">GPR35 acts a dual role and therapeutic target in inflammation</a></div>
+    <div class="authors">Wu, Yetian†, <strong>Zhang, Pei†</strong>, H. Fan, C. Zhang, P. Yu, X. Liang, and Chen, Yang*</div>
+    <div class="venue">Frontiers in Immunology, vol. 14, no. 1254446, 2023 &nbsp;·&nbsp; <a href="#">PDF</a></div>
+  </div>
+
+  <h3 class="ssh">Preprints / Under Review</h3>
+  <div class="pub">
+    <div class="ptitle"><span class="pub-num">1</span>Metabolomic profile score for predicting serum per- and polyfluoroalkyl substance (PFAS) levels: A novel application of machine learning to enhance detection of environmental pollutants</div>
+    <div class="authors">Lim, Jungeun*, <strong>Zhang, Pei</strong>, J. Rhee, M. C. Playdon, A. J. Cross, R. Stolzenberg-Solomon, V. L. Roger, M. P. Purdue, Albanes, Demetrius*, Hong, Hyokyoung G.*, and Wong, Jason Y. Y.*</div>
+    <div class="venue">Under review at International Journal of Hygiene and Environmental Health, 2026</div>
+  </div>
+
+  <h2 class="sh">Software</h2>
+  <div class="pub">
+    <div class="ptitle"><strong>Heritability-Velocity</strong> — Author &amp; Maintainer</div>
+    <div class="authors">Reproducible framework for joint estimation of static and dynamic heritability in longitudinal phenotypes; scalable AI-REML and REHE algorithms for genome-wide data.</div>
+    <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">arXiv</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><strong>PLCO</strong> — Author &amp; Maintainer</div>
+    <div class="authors">Mixed-effects modeling framework with crossed genetic and individual-specific random effects for PSA trajectories in large-scale prostate cancer screening studies.</div>
+    <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">Paper</a></div>
+  </div>
+  <div class="pub">
+    <div class="ptitle"><strong>AARP</strong> — Author &amp; Maintainer</div>
+    <div class="authors">Measurement error models for bias correction in food frequency questionnaire–based dietary intake assessment.</div>
+    <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">Paper</a></div>
+  </div>
+</div>
+
+<!-- CV -->
+<div class="page" id="pg-cv">
+  <h1 class="page-title">CV &nbsp;<a href="#" style="font-size:14px;font-family:-apple-system,sans-serif;font-weight:normal;">[Download PDF]</a></h1>
+
+  <h2 class="sh">Education</h2>
+  <div class="cv-entry">
+    <div class="cv-year">2019/09 – 2025/05</div>
+    <div class="cv-detail">
+      <strong>Ph.D. in Mathematical Statistics, University of Maryland, College Park (UMD)</strong>
+      <em>Dissertation: Mixed Modeling Approaches for Characterizing Genetic Effects and Heritability Metrics in Longitudinal Phenotypes (NIH Outstanding Graduate Research)</em>
+      <span>Primary Advisors: Drs. Paul S. Albert (NIH Biostatistics) and Doron Levy (UMD Applied Mathematics)</span>
+      <span>Co-advisors: Drs. Jianxin Shi and Hyokyoung G. Hong (NIH Biostatistics)</span>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2014/09 – 2016/06</div>
+    <div class="cv-detail">
+      <strong>M.S. in Mathematics, University of Science and Technology of China (USTC)</strong>
+      <em>Dissertation: Ekeland Index Theory for Periodic Solutions and Symmetric Periodic Solutions of Convex Hamiltonian Systems</em>
+      <span>Advisor: Dr. Xinan Ma &nbsp;·&nbsp; Co-advisor: Dr. Hui Liu</span>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2010/09 – 2014/06</div>
+    <div class="cv-detail">
+      <strong>B.S. in Mathematics and Applied Mathematics (Teacher Education Program), Nanjing Normal University (NNU)</strong>
+      <em>Dissertation: Some Problems in Hamiltonian Systems (NNU Outstanding Graduation Thesis)</em>
+      <span>Advisor: Dr. Yujun Dong</span>
+    </div>
+  </div>
+
+  <h2 class="sh">Employment</h2>
+  <div class="cv-entry">
+    <div class="cv-year">2025/05 – present</div>
+    <div class="cv-detail">
+      <strong>Postdoctoral Fellow</strong>
+      <span>Biostatistics Branch (BB), DCEG, National Cancer Institute (NCI), NIH</span>
+      <span>Mentored by Drs. Paul S. Albert and Jianxin Shi</span>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2021/09 – 2025/05</div>
+    <div class="cv-detail">
+      <strong>Predoctoral Fellow</strong>
+      <span>BB, DCEG, NCI, NIH</span>
+      <span>Mentored by Drs. Paul S. Albert, Jianxin Shi, and Hyokyoung G. Hong</span>
+    </div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2019/08 – 2021/08</div>
+    <div class="cv-detail"><strong>Teaching Assistant</strong><span>Department of Mathematics, UMD</span></div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2016/08 – 2017/04</div>
+    <div class="cv-detail"><strong>Mathematics Teacher</strong><span>NO.1 Middle School Affiliated to Central China Normal University, Wuhan, China</span></div>
+  </div>
+  <div class="cv-entry">
+    <div class="cv-year">2014/09 – 2016/06</div>
+    <div class="cv-detail"><strong>Teaching Assistant</strong><span>Department of Mathematics, USTC</span></div>
+  </div>
+
+  <h2 class="sh">Honors &amp; Awards (Selected)</h2>
+  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>NCI Early K99/R00 Grant Application — Rated as "Competitive, Not Discussed"</span><span>NSF Travel Support Award &nbsp;·&nbsp; IMS New Researcher Travel Award</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2025 &amp; 2026</div><div class="cv-detail"><span>NIH Postdoctoral Fellowship (twice)</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2025</div><div class="cv-detail"><span>NCI-DCEG Institutional Nominee for NCI Pathway to Independence Award (K99/R00)</span><span>NIH Fellows Award for Research Excellence (FARE) 2026 — top 25% of all applicants</span><span>NIH Outstanding Graduate Research</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2023 &amp; 2024</div><div class="cv-detail"><span>Women in Statistics and Data Science Conference Student Travel Award (twice)</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2021 – 2024</div><div class="cv-detail"><span>NIH Predoctoral Fellowship (4 times) &nbsp;·&nbsp; UMD Tuition Award for External Fellowship (4 times)</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2019 &amp; 2020</div><div class="cv-detail"><span>UMD Dean's Fellowship (twice)</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2016</div><div class="cv-detail"><span>USTC Outstanding Graduate</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2014</div><div class="cv-detail"><span>NNU Outstanding Graduate &nbsp;·&nbsp; NNU First Award of Feng Ruer Scholarship &nbsp;·&nbsp; NNU Outstanding Dissertation</span></div></div>
+
+  <h2 class="sh">Academic Activities (Selected)</h2>
+  <h3 class="ssh">Invited Talks / Seminars</h3>
+  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>International Biometric Conference (IBC), Seoul, South Korea</span><span>Biostatistics Branch of NCI-DCEG Works in Progress, Rockville, MD</span></div></div>
+
+  <h3 class="ssh">Contributed Presentations</h3>
+  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>ASHG Annual Meeting, Montreal &nbsp;·&nbsp; JSM, Boston &nbsp;·&nbsp; 11th Workshop on Biostatistics and Bioinformatics, Georgia State University</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2025</div><div class="cv-detail"><span>JSM, Nashville &nbsp;·&nbsp; 17th Annual NCI-DCEG Fellows' Training Symposium, Rockville, MD</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2024</div><div class="cv-detail"><span>JSM, Portland &nbsp;·&nbsp; AI Day for Federal Statistics, National Academy of Sciences, Washington DC &nbsp;·&nbsp; NIH Annual Graduate Student Research Symposium</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2023</div><div class="cv-detail"><span>WSDS, Seattle &nbsp;·&nbsp; JSM, Toronto</span></div></div>
+
+  <h2 class="sh">Teaching</h2>
+  <div class="cv-entry"><div class="cv-year">Fall 2019</div><div class="cv-detail"><strong>Sampling Theory (STAT440)</strong><span>Grader, UMD</span></div></div>
+  <div class="cv-entry"><div class="cv-year">Spring 2020</div><div class="cv-detail"><strong>Introduction to Linear Algebra (MATH240)</strong><span>Teaching Assistant, UMD</span></div></div>
+  <div class="cv-entry"><div class="cv-year">Fall 2020 &amp; Spring 2021</div><div class="cv-detail"><strong>Elementary Probability and Statistics (STAT100)</strong><span>Teaching Assistant, UMD</span></div></div>
+  <div class="cv-entry"><div class="cv-year">Spring 2015 &amp; 2016</div><div class="cv-detail"><strong>Calculus II</strong><span>Teaching Assistant, USTC</span></div></div>
+
+  <h2 class="sh">Service</h2>
+  <div class="cv-entry"><div class="cv-year">2021 – present</div><div class="cv-detail"><strong>Journal Reviewer</strong><span>Biometrics · Statistics in Medicine · Journal of Biopharmaceutical Statistics · Frontiers in Oncology · LabMed Discovery</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><strong>Chief Judge</strong><span>NIH Fellows Award for Research Excellence (FARE) 2027 Competition</span></div></div>
+  <div class="cv-entry"><div class="cv-year">2022 – 2023</div><div class="cv-detail"><strong>Vice President</strong><span>Women in Mathematics, University of Maryland, College Park</span></div></div>
+
+  <h2 class="sh">Skills</h2>
+  <div class="cv-entry"><div class="cv-year">Programming</div><div class="cv-detail"><span>R · Python · C/C++ · SQL · Jupyter Notebook</span></div></div>
+  <div class="cv-entry"><div class="cv-year">Infrastructure</div><div class="cv-detail"><span>NIH Biowulf HPC · All of Us Research Hub · UK Biobank</span></div></div>
+  <div class="cv-entry"><div class="cv-year">Writing</div><div class="cv-detail"><span>LaTeX · R Markdown · Git</span></div></div>
+
+  <h2 class="sh">References</h2>
+  <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:0.5rem;">
+    <div style="font-size:14px;min-width:220px;">
+      <strong>Paul S. Albert</strong><br>
+      <span style="color:#555;">Senior Investigator &amp; Director, Biostatistics Branch, DCEG, NCI, NIH</span><br>
+      <a href="mailto:albertp@mail.nih.gov">albertp@mail.nih.gov</a>
+    </div>
+    <div style="font-size:14px;min-width:220px;">
+      <strong>Jianxin Shi</strong><br>
+      <span style="color:#555;">Senior Investigator, Biostatistics Branch, DCEG, NCI, NIH</span><br>
+      <a href="mailto:jianxin.shi@nih.gov">jianxin.shi@nih.gov</a>
+    </div>
+    <div style="font-size:14px;min-width:220px;">
+      <strong>Doron Levy</strong><br>
+      <span style="color:#555;">Professor &amp; Chair, Department of Mathematics, University of Maryland</span><br>
+      <a href="mailto:dlevy@umd.edu">dlevy@umd.edu</a>
+    </div>
+  </div>
+</div>
+
+<!-- LINKS -->
+<div class="page" id="pg-links">
+  <h1 class="page-title">Links</h1>
+
+  <div class="links-section">
+    <h3>Academic Profiles</h3>
+    <div class="link-row"><span class="link-badge">Google Scholar</span><a href="#">scholar.google.com</a><span class="ldesc">— Publication list &amp; citation metrics</span></div>
+    <div class="link-row"><span class="link-badge">NCBI Bibliography</span><a href="#">NCBI profile</a><span class="ldesc">— PubMed-indexed publications</span></div>
+    <div class="link-row"><span class="link-badge">ORCID</span><a href="#">0000-0000-0000-0000</a></div>
+    <div class="link-row"><span class="link-badge">ResearchGate</span><a href="#">ResearchGate profile</a></div>
+    <div class="link-row"><span class="link-badge">Semantic Scholar</span><a href="#">Semantic Scholar</a></div>
+  </div>
+
+  <div class="links-section">
+    <h3>Code &amp; Software</h3>
+    <div class="link-row"><span class="link-badge">GitHub</span><a href="#">github.com/bettyzhangpei</a></div>
+    <div class="link-row"><span class="link-badge">Heritability-Velocity</span><a href="#">R package — GitHub</a><span class="ldesc">— Longitudinal heritability estimation</span></div>
+    <div class="link-row"><span class="link-badge">PLCO</span><a href="#">R package — GitHub</a><span class="ldesc">— PSA trajectory mixed-effects models</span></div>
+    <div class="link-row"><span class="link-badge">AARP</span><a href="#">R package — GitHub</a><span class="ldesc">— Dietary intake measurement error models</span></div>
+  </div>
+
+  <div class="links-section">
+    <h3>Professional &amp; Social</h3>
+    <div class="link-row"><span class="link-badge">LinkedIn</span><a href="#">linkedin.com/in/peizhang</a></div>
+    <div class="link-row"><span class="link-badge">Email</span><a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
+  </div>
+
+  <div class="links-section">
+    <h3>Institutional</h3>
+    <div class="link-row"><span class="link-badge">NIH / NCI</span><a href="https://dceg.cancer.gov/about/staff-directory/zhang-pei">NCI-DCEG Faculty Profile</a></div>
+    <div class="link-row"><span class="link-badge">Lab</span><a href="#">Biostatistics Branch, DCEG</a></div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="page" id="pg-gallery">
+  <h1 class="page-title">Gallery</h1>
+  <p class="gallery-note">Photos and memories. View the full gallery at <a href="https://bettyzhangpei.github.io/gallery/" target="_blank">bettyzhangpei.github.io/gallery</a>.</p>
+  <iframe class="gallery-frame" src="https://bettyzhangpei.github.io/gallery/" title="Pei Zhang Gallery" loading="lazy"></iframe>
+</div>
+
+<footer>
+  Last updated April 30, 2026 &nbsp;·&nbsp; Built with HTML &amp; CSS
+</footer>
+
+<script>
+function show(id, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+  document.getElementById('pg-' + id).classList.add('active');
+  el.classList.add('active');
+  window.scrollTo(0, 0);
+  return false;
+}
+</script>
+</body>
+</html>
