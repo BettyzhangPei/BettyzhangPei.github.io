@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <title>Pei Zhang</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,117 +20,58 @@
   nav ul li a:hover { color: #fff; }
   nav ul li a.active { color: #ff5c8a; font-weight: 600; }
 
-  /* Search overlay */
-  .search-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: rgba(255,255,255,0.97);
-    padding: 24px 48px;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  }
+  .search-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.97); padding: 24px 48px; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
   .search-overlay.open { display: block; }
-  .search-overlay-inner {
-    max-width: 680px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-bottom: 2px solid #1f1f1f;
-    padding-bottom: 8px;
-  }
-  .search-overlay-inner input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    font-family: Georgia, serif;
-    color: #222;
-    background: transparent;
-  }
+  .search-overlay-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #1f1f1f; padding-bottom: 8px; }
+  .search-overlay-inner input { flex: 1; border: none; outline: none; font-size: 20px; font-family: Georgia, serif; color: #222; background: transparent; }
   .search-overlay-inner input::placeholder { color: #aaa; }
-  .search-close {
-    background: none; border: none; font-size: 22px;
-    cursor: pointer; color: #888; line-height: 1;
-  }
+  .search-close { background: none; border: none; font-size: 22px; cursor: pointer; color: #888; line-height: 1; }
   .search-close:hover { color: #222; }
-  #search-results {
-    max-width: 680px;
-    margin: 16px auto 0;
-    font-size: 15px;
-    font-family: -apple-system, sans-serif;
-  }
+  #search-results { max-width: 680px; margin: 16px auto 0; font-size: 15px; font-family: -apple-system, sans-serif; }
   #search-results a { color: #6b1a3a; display: block; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
   #search-results a:hover { text-decoration: underline; }
 
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
-
   .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-
   .mentor { color: #6b1a3a; text-decoration: none; border-bottom: 1px solid rgba(107,26,58,0.6); transition: all 0.2s ease; }
   .mentor:hover { border-bottom-color: #6b1a3a; }
-
-  .contact-list { margin-top: 1.4rem; font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Noto Color Emoji", Arial, sans-serif; color: #444; }
-  .contact-list div { margin-bottom: 4px; }
-
   .teaching-entry { display: flex; gap: 1.6rem; margin-bottom: 1.2rem; }
   .teaching-time { width: 160px; font-size: 14px; color: #888; font-family: -apple-system, sans-serif; flex-shrink: 0; }
   .teaching-content strong { font-size: 18px; font-weight: 600; display: block; }
   .teaching-content span { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; }
-
   .gallery-container { display: flex; flex-direction: column; gap: 1.8rem; align-items: center; }
   .gallery-container figure { max-width: 520px; text-align: center; }
   .gallery-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .gallery-container figcaption { margin-top: 0.5rem; font-size: 13px; color: #666; }
-
-  .home-name { font-size: 42px; font-weight: normal; color: #6b1a3a; margin-bottom: 2.5rem; }
-  .home-body { display: flex; gap: 3rem; align-items: flex-start; }
-  .home-text { flex: 1; font-size: 16px; color: #222; }
+  .home-name { font-size: 52px; font-weight: normal; color: #6b1a3a; margin-bottom: 0.3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+  .home-body { display: block; font-size: 16px; color: #222; }
+  .home-photo { float: right; margin: 0 0 1.5rem 2.5rem; width: 240px; }
   .home-text p + p { margin-top: 1em; }
-  .home-photo { width: 240px; flex-shrink: 0; }
-
+  .home-body::after { content: ''; display: table; clear: both; }
   .page-title { font-size: 28px; font-weight: normal; color: #6b1a3a; margin-bottom: 2rem; text-align: center; }
-
   h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
   h2.sh:first-of-type { margin-top: 0; }
   h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: #555; margin: 1.2rem 0 0.5rem; }
-
   .cv-entry { display: flex; gap: 1.4rem; margin-bottom: 0.9rem; }
-  .cv-year { font-size: 13px; color: #999; font-family: -apple-system, sans-serif; min-width: 110px; padding-top: 3px; flex-shrink: 0; }
   .cv-detail { font-size: 15px; }
   .cv-detail strong { font-weight: bold; display: block; line-height: 1.45; }
   .cv-detail span { font-size: 13.5px; color: #555; font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
-  .cv-detail em { font-size: 13.5px; color: #777; font-family: -apple-system, sans-serif; font-style: italic; display: block; }
-
   .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid #ddd; }
   .pub .ptitle { font-size: 15px; }
   .pub .ptitle a { color: #6b1a3a; }
   .pub .authors { font-size: 13.5px; color: #444; margin-top: 2px; }
   .pub .venue { font-size: 13px; color: #888; font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
-  .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #6b1a3a; color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; flex-shrink: 0; }
-
-  .links-section { margin-bottom: 1.8rem; }
-  .links-section h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin-bottom: 0.6rem; border-bottom: 1px solid #eee; padding-bottom: 4px; }
-  .link-row { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; border-bottom: 0.5px solid #f5f5f5; font-family: -apple-system, sans-serif; font-size: 14.5px; }
-  .link-row:last-child { border-bottom: none; }
-  .link-badge { font-size: 11px; background: #f5eaee; color: #6b1a3a; padding: 2px 9px; border-radius: 3px; font-weight: 500; min-width: 110px; text-align: center; flex-shrink: 0; }
-  .link-row a { color: #1a5276; }
-  .link-row .ldesc { color: #888; font-size: 13px; }
-
+  .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #6b1a3a; color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; }
   .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
-
-  .search-btn { background: none; border: none; color: #ccc; font-size: 16px; font-family: -apple-system, sans-serif; cursor: pointer; line-height: 1; padding: 0; }
+  .search-btn { background: none; border: none; color: #ccc; font-size: 16px; cursor: pointer; line-height: 1; padding: 0; }
   .search-btn:hover { color: #ff5c8a; }
-
   .legend { font-size: 13px; color: #888; font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
-
- footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #222; margin-top: 3rem; }
-.footer-icons { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 1rem; }
-.footer-icons a { color: #222; font-size: 22px; text-decoration: none; transition: color 0.2s; }
-.footer-icons a:hover { color: #6b1a3a; }
-.footer-copy { font-size: 13px; color: #444; }
+  footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #222; margin-top: 3rem; }
+  .footer-icons { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 1rem; }
+  .footer-icons a { color: #222; font-size: 24px; text-decoration: none; transition: color 0.2s; }
+  .footer-icons a:hover { color: #6b1a3a; }
+  .footer-copy { font-size: 13px; color: #444; }
 </style>
 </head>
 <body>
@@ -146,7 +89,6 @@
   </ul>
 </nav>
 
-<!-- Search overlay -->
 <div id="search-overlay" class="search-overlay">
   <div class="search-overlay-inner">
     <span style="font-size:18px; color:#aaa;">&#128269;</span>
@@ -158,8 +100,11 @@
 
 <!-- HOME -->
 <div class="page active" id="pg-home">
-  <h1 class="home-name">Pei Zhang</h1>
-  <div class="home-body">
+  <h1 class="home-name">Welcome!</h1>
+  <p style="font-family:-apple-system,sans-serif; font-size:15px; color:#555; margin-bottom:2rem; line-height:1.8;">This site includes information about my research and educational activities. I invite you to contact me if you would like to discuss statistics and science.</p>
+    <div class="home-photo">
+      <img src="Pei_Zhang.jpeg" alt="Pei Zhang" class="home-photo-img">
+    </div>
     <div class="home-text">
       <p>I am a Postdoctoral Fellow at the Biostatistics Branch, Division of Cancer Epidemiology &amp; Genetics, National Cancer Institute, National Institutes of Health,
         mentored by <a href="https://dceg.cancer.gov/about/staff-directory/albert-paul" class="mentor">Dr. Paul S. Albert</a>
@@ -174,7 +119,7 @@
         and <a href="https://dceg.cancer.gov/about/staff-directory/hong-grace" class="mentor">Dr. Hyokyoung G. Hong</a>
         through the <a href="https://www.training.nih.gov/research-training/grads/gpp/">NIH Graduate Partnerships Program</a>,
         where I was recognized with the NIH Outstanding Graduate Research award.</p>
-
+      <p>This site includes information about my research and educational activities. I invite you to contact me if you would like to discuss statistics and science.</p>
       <div style="margin-top:2rem;">
         <div style="display:flex; gap:3rem; flex-wrap:wrap;">
           <div style="flex:1; min-width:200px;">
@@ -204,12 +149,22 @@
         <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">News</div>
         <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
           <li><strong>2026-08-03</strong> — Contributed Talk on <em>Heritability Estimation of Longitudinal EHR Traits in the Presence of Informative Measurement Processes</em>.<div style="color:#777; font-size:13.5px;">JSM 2026, Boston, MA</div></li>
-          <li><strong>2026-07</strong> — Invited talk on <em>Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</em>.<div style="color:#777; font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
-          <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</a>.<div style="color:#777; font-size:13.5px;">Biostatistics</div></li>
+          <li><strong>2026-07</strong> — Invited talk on <em>Estimating the Heritability of Longitudinal Rate-of-Change</em>.<div style="color:#777; font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
+          <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change</a>.<div style="color:#777; font-size:13.5px;">Biostatistics</div></li>
           <li><strong>2026-03</strong> — Awards: <a href="https://imstat.org/2026/04/29/recipients-of-the-2026-ims-new-researcher-travel-awards-announced/">IMS New Researcher Travel Award</a>, <a href="https://math.gsu.edu/yichuan/2026Workshop/">NSF Travel Award</a>.</li>
           <li><strong>2026-03</strong> — Service: Committee member and Chief Judge, <a href="https://www.training.nih.gov/felcom/fare/">NIH FARE Award 2027 Competition</a>.</li>
           <li><strong>2025-07-08</strong> — <a href="https://www.training.nih.gov/felcom/fare/">NIH FARE Award 2026</a> (top 25%).</li>
-          <li><strong>2025-03-22</strong> — Paper accepted: <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">Mixed Modeling Approach for Characterizing the Genetic Effects in a Longitudinal Phenotype</a>.<div style="color:#777; font-size:13.5px;">Annals of Applied Statistics</div></li>
+          <li><strong>2025-03-22</strong> — Paper accepted: <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">Mixed Modeling Approach for Characterizing Genetic Effects</a>.<div style="color:#777; font-size:13.5px;">Annals of Applied Statistics</div></li>
+        </ul>
+      </div>
+
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">Honors</div>
+        <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
+          <li><strong>2026</strong> — IMS New Researcher Travel Award</li>
+          <li><strong>2026</strong> — NSF Travel Award</li>
+          <li><strong>2025</strong> — NIH FARE Award (top 25%)</li>
+          <li><strong>2025</strong> — NIH Outstanding Graduate Research Award</li>
         </ul>
       </div>
 
@@ -218,11 +173,8 @@
         <div style="margin-top:4px;">Office: 9609 Medical Center Dr, Room 7E614, Rockville, MD 20850, USA</div>
       </div>
     </div>
-    <div class="home-photo">
-      <img src="Pei_Zhang.jpeg" alt="Pei Zhang" class="home-photo-img">
-    </div>
   </div>
-</div><!-- end #pg-home -->
+</div>
 
 <!-- RESEARCH -->
 <div class="page" id="pg-research">
@@ -271,7 +223,7 @@
 
   <h3 class="ssh">Preprints / Under Review</h3>
   <div class="pub">
-    <div class="ptitle"><span class="pub-num">1</span>Metabolomic profile score for predicting serum per- and polyfluoroalkyl substance (PFAS) levels: A novel application of machine learning to enhance detection of environmental pollutants</div>
+    <div class="ptitle"><span class="pub-num">1</span>Metabolomic profile score for predicting serum per- and polyfluoroalkyl substance (PFAS) levels</div>
     <div class="authors">Lim, Jungeun*, <strong>Zhang, Pei</strong>, J. Rhee, M. C. Playdon, A. J. Cross, R. Stolzenberg-Solomon, V. L. Roger, M. P. Purdue, Albanes, Demetrius*, Hong, Hyokyoung G.*, and Wong, Jason Y. Y.*</div>
     <div class="venue">Under review at International Journal of Hygiene and Environmental Health, 2026</div>
   </div>
@@ -279,12 +231,12 @@
   <h2 class="sh">Software</h2>
   <div class="pub">
     <div class="ptitle"><strong>Heritability-Velocity</strong> — Author &amp; Maintainer</div>
-    <div class="authors">Reproducible framework for joint estimation of static and dynamic heritability in longitudinal phenotypes; scalable AI-REML and REHE algorithms for genome-wide data.</div>
+    <div class="authors">Reproducible framework for joint estimation of static and dynamic heritability in longitudinal phenotypes.</div>
     <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">arXiv</a></div>
   </div>
   <div class="pub">
     <div class="ptitle"><strong>PLCO</strong> — Author &amp; Maintainer</div>
-    <div class="authors">Mixed-effects modeling framework with crossed genetic and individual-specific random effects for PSA trajectories in large-scale prostate cancer screening studies.</div>
+    <div class="authors">Mixed-effects modeling framework for PSA trajectories in large-scale prostate cancer screening studies.</div>
     <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">Paper</a></div>
   </div>
   <div class="pub">
@@ -292,7 +244,7 @@
     <div class="authors">Measurement error models for bias correction in food frequency questionnaire–based dietary intake assessment.</div>
     <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">Paper</a></div>
   </div>
-</div><!-- end #pg-research -->
+</div>
 
 <!-- TEACHING -->
 <div class="page" id="pg-teaching">
@@ -314,9 +266,9 @@
     <div class="teaching-time">Spring 2015 – 2016</div>
     <div class="teaching-content"><strong>Calculus II</strong><span>Teaching Assistant · University of Science and Technology of China</span></div>
   </div>
-</div><!-- end #pg-teaching -->
+</div>
 
-<!-- FIX 1: CV page now properly opened and closed -->
+<!-- CV -->
 <div class="page" id="pg-cv">
   <h1 class="page-title">CV</h1>
   <iframe src="Pei_Zhang_CV.pdf" width="100%" height="800px"
@@ -331,9 +283,9 @@
       ↓ Download PDF
     </a>
   </div>
-</div><!-- end #pg-cv -->
+</div>
 
-<!-- FIX 2: Links section is now fully inside #pg-links -->
+<!-- LINKS -->
 <div class="page" id="pg-links">
   <h1 class="page-title">Links</h1>
   <ul style="list-style:none; padding:0; font-size:18px; line-height:2.8;">
@@ -342,11 +294,12 @@
     <li><a href="https://github.com/BettyzhangPei" target="_blank">GitHub</a></li>
     <li><a href="https://dceg.cancer.gov/fellowship-training/fellowship-experience/meet-fellows/bb/zhang-pei" target="_blank">NIH profile page</a></li>
   </ul>
-</div><!-- end #pg-links -->
+</div>
 
 <!-- GALLERY -->
 <div class="page" id="pg-gallery">
   <h1 class="page-title">Gallery</h1>
+  <p class="gallery-note">Selected moments from research, academic events, and travel.</p>
   <div class="gallery-container">
     <figure>
       <img src="images/commencement.JPG" alt="Commencement">
@@ -365,28 +318,25 @@
       <figcaption>Hiking at Yellowstone National Park, July 2025</figcaption>
     </figure>
   </div>
-</div><!-- end #pg-gallery -->
+</div>
 
 <footer>
- <div class="footer-icons">
+  <div class="footer-icons">
     <a href="https://www.linkedin.com/in/peizhang" target="_blank" title="LinkedIn">
-      <!-- LinkedIn -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.381-1.119-2.5-2.5-2.5s-2.5 1.119-2.5 2.5v5.5h-3v-10h3v1.5c.878-1.325 2.345-2.5 3.5-2.5 2.485 0 4.5 2.015 4.5 4.5v6.5z"/></svg>
+      <i class="fab fa-linkedin"></i>
     </a>
     <a href="https://github.com/BettyzhangPei" target="_blank" title="GitHub">
-      <!-- GitHub -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.905-.015 3.3 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      <i class="fab fa-github"></i>
     </a>
     <a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ&hl=en" target="_blank" title="Google Scholar">
-      <!-- Google Scholar "G" -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h4.5V20h4v-6h7v6h4V9.5H24z"/></svg>
+      <i class="ai ai-google-scholar"></i>
     </a>
+
   </div>
   <div class="footer-copy">Copyright &copy; 2026 Pei Zhang</div>
 </footer>
 
 <script>
-  // FIX 3 & 4: Rewritten show() to always find and highlight the correct nav link
   function show(pageId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
@@ -396,7 +346,6 @@
     window.scrollTo(0, 0);
   }
 
-  // Attach click handlers to nav links via data-page attribute
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -414,21 +363,17 @@
       input.focus();
     }
   }
-  // Close on Escape key
+
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      document.getElementById("search-overlay").classList.remove("open");
-    }
+    if (e.key === "Escape") document.getElementById("search-overlay").classList.remove("open");
   });
 
   function siteSearch() {
     const query = document.getElementById("search-input").value.toLowerCase();
     const results = document.getElementById("search-results");
     if (query.length < 2) { results.innerHTML = ""; return; }
-
-    const pages = document.querySelectorAll(".page");
     let output = "";
-    pages.forEach(page => {
+    document.querySelectorAll(".page").forEach(page => {
       const text = page.innerText.toLowerCase();
       const titleEl = page.querySelector(".page-title, .home-name");
       const title = titleEl ? titleEl.innerText : "Home";
