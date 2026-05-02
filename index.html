@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <title>Pei Zhang</title>
 <style>
+  :root {--accent: #d414b8;}
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; color: #222; background: #fff; line-height: 1.75; }
   .home-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
@@ -18,7 +19,7 @@
   nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
   nav ul li a { font-size: 14px; color: #ccc; font-family: -apple-system, sans-serif; text-decoration: none; }
   nav ul li a:hover { color: #fff; }
-  nav ul li a.active { color: #ff5c8a; font-weight: 600; }
+  nav ul li a.active { color: var(--accent); font-weight: 600; }
 
   .search-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.97); padding: 24px 48px; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
   .search-overlay.open { display: block; }
@@ -34,8 +35,8 @@
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
   .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-  .mentor { color: #6b1a3a; text-decoration: none; border-bottom: 1px solid rgba(107,26,58,0.6); transition: all 0.2s ease; }
-  .mentor:hover { border-bottom-color: #6b1a3a; }
+  .mentor { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(212, 20, 184, 0.6); transition: all 0.2s ease; }
+  .mentor:hover { border-bottom-color: var(--accent); }
   .teaching-entry { display: flex; gap: 1.6rem; margin-bottom: 1.2rem; }
   .teaching-time { width: 160px; font-size: 14px; color: #888; font-family: -apple-system, sans-serif; flex-shrink: 0; }
   .teaching-content strong { font-size: 18px; font-weight: 600; display: block; }
@@ -44,12 +45,12 @@
   .gallery-container figure { max-width: 520px; text-align: center; }
   .gallery-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .gallery-container figcaption { margin-top: 0.5rem; font-size: 13px; color: #666; }
-  .home-name { font-size: 52px; font-weight: normal; color: #6b1a3a; margin-bottom: 0.3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+  .home-name { font-size: 52px; font-weight: normal; color: var(--accent); margin-bottom: 0.3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
   .home-body { display: block; font-size: 16px; color: #222; }
   .home-photo { float: right; margin: 0 0 1.5rem 2.5rem; width: 240px; }
   .home-text p + p { margin-top: 1em; }
   .home-body::after { content: ''; display: table; clear: both; }
-  .page-title { font-size: 28px; font-weight: normal; color: #6b1a3a; margin-bottom: 2rem; text-align: center; }
+  .page-title { font-size: 28px; font-weight: normal; color: var(--accent); margin-bottom: 2rem; text-align: center; }
   h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
   h2.sh:first-of-type { margin-top: 0; }
   h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: #555; margin: 1.2rem 0 0.5rem; }
@@ -59,10 +60,10 @@
   .cv-detail span { font-size: 13.5px; color: #555; font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
   .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid #ddd; }
   .pub .ptitle { font-size: 15px; }
-  .pub .ptitle a { color: #6b1a3a; }
+  .pub .ptitle a { color: var(--accent); }
   .pub .authors { font-size: 13.5px; color: #444; margin-top: 2px; }
   .pub .venue { font-size: 13px; color: #888; font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
-  .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #6b1a3a; color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; }
+  .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; }
   .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
   .search-btn { background: none; border: none; color: #ccc; font-size: 16px; cursor: pointer; line-height: 1; padding: 0; }
   .search-btn:hover { color: #ff5c8a; }
@@ -70,8 +71,8 @@
   footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #222; margin-top: 3rem; }
   .footer-icons { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 1rem; }
   .footer-icons a { color: #222; font-size: 24px; text-decoration: none; transition: color 0.2s; }
-  .footer-icons a:hover { color: #6b1a3a; }
-  .footer-copy { font-size: 13px; color: #444; }
+  .footer-icons a:hover { color: var(--accent); }
+  .footer-copy { font-size: 13px; color: var(--accent); }
 </style>
 </head>
 <body>
