@@ -11,7 +11,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; color: #222; background: #fff; line-height: 1.75; }
   .home-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
-  a { color: #6b1a3a; text-decoration: none; }
+  a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
   nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f; }
@@ -29,14 +29,14 @@
   .search-close { background: none; border: none; font-size: 22px; cursor: pointer; color: #888; line-height: 1; }
   .search-close:hover { color: #222; }
   #search-results { max-width: 680px; margin: 16px auto 0; font-size: 15px; font-family: -apple-system, sans-serif; }
-  #search-results a { color: #6b1a3a; display: block; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+  #search-results a { color: var(--accent); display: block; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
   #search-results a:hover { text-decoration: underline; }
 
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
   .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-  .mentor { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(212, 20, 184, 0.6); transition: all 0.2s ease; }
-  .mentor:hover { border-bottom-color: var(--accent); }
+  .mentor { color: var(--accent); text-decoration: none; }
+  .mentor:hover { text-decoration: underline; }
   .teaching-entry { display: flex; gap: 1.6rem; margin-bottom: 1.2rem; }
   .teaching-time { width: 160px; font-size: 14px; color: #888; font-family: -apple-system, sans-serif; flex-shrink: 0; }
   .teaching-content strong { font-size: 18px; font-weight: 600; display: block; }
@@ -66,7 +66,7 @@
   .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; }
   .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
   .search-btn { background: none; border: none; color: #ccc; font-size: 16px; cursor: pointer; line-height: 1; padding: 0; }
-  .search-btn:hover { color: #ff5c8a; }
+  .search-btn:hover { color: var(--accent); }
   .legend { font-size: 13px; color: #888; font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
   footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #222; margin-top: 3rem; }
   .footer-icons { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 1rem; }
@@ -123,7 +123,7 @@
       <div style="margin-top:2rem;">
         <div style="display:flex; gap:3rem; flex-wrap:wrap;">
           <div style="flex:1; min-width:200px;">
-            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Research Interests</div>
+            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Research Interests</div>
             <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.9;">
               <li>Longitudinal &amp; correlated data methodology</li>
               <li>Statistical genetics &amp; genomics (EHR, RWD, PLCO, All of Us, UK Biobank)</li>
@@ -132,7 +132,7 @@
             </ul>
           </div>
           <div style="flex:1; min-width:180px;">
-            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Education</div>
+            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Education</div>
             <div style="font-size:14.5px; color:#333; line-height:1.9;">
               <strong style="font-size:15px;">Ph.D. in Mathematical Statistics, 2025</strong><br>
               University of Maryland, College Park<br><br>
@@ -146,8 +146,9 @@
       </div>
 
       <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
-        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">News</div>
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">News</div>
         <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
+          <li><strong>2026-10</strong> — Contributed Talk on <em>Heritability Estimation of Longitudinal EHR Traits in the Presence of Informative Measurement Processes</em>.<div style="color:#777; font-size:13.5px;">ASHG 2026, Montreal, Canada</div></li>
           <li><strong>2026-08-03</strong> — Contributed Talk on <em>Heritability Estimation of Longitudinal EHR Traits in the Presence of Informative Measurement Processes</em>.<div style="color:#777; font-size:13.5px;">JSM 2026, Boston, MA</div></li>
           <li><strong>2026-07</strong> — Invited talk on <em>Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</em>.<div style="color:#777; font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
           <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</a>.<div style="color:#777; font-size:13.5px;">Biostatistics</div></li>
@@ -159,7 +160,7 @@
       </div>
 
       <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
-        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">Honors</div>
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">Honors</div>
         <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
           <li><strong>2026</strong> — IMS New Researcher Travel Award</li>
           <li><strong>2026</strong> — NSF Travel Award</li>
@@ -171,7 +172,7 @@
           <li><strong>2022</strong> — UMD Graduate Student Travel Fellowship</li>
           <li><strong>2022</strong> — Rutgers University Travel Award for Conference on Advances in Bayesian and Frequentist Statistics</li>
          <li><strong>2021-2024</strong> — NIH Predoctoral Fellowship (4 times)</li>
-          <li><strong>2019-2020</strong> —  UMD Dean’s Fellowship (twice)</li>
+          <li><strong>2019-2020</strong> —  UMD Dean's Fellowship (twice)</li>
         </ul>
       </div>
 
@@ -213,7 +214,7 @@
     <div class="venue">Advanced Science, e11406, 2026 &nbsp;·&nbsp; <a href="#">PDF</a></div>
   </div>
   <div class="pub">
-    <div class="ptitle"><span class="pub-num">2</span><a href="#">CCN1 enhances tumor immunosuppression through collagen-mediated chemokine secretion in pancreatic cancer</a></div>
+    <div class="ptitle"><span class="pub-num">1</span><a href="#">CCN1 enhances tumor immunosuppression through collagen-mediated chemokine secretion in pancreatic cancer</a></div>
     <div class="authors">H. Fan, H. Zhao, L. Gao, Y. Dong, <strong>Zhang, Pei</strong>, P. Yu, Y. Ji, Z.-S. Chen, X. Liang, and Chen, Yang*</div>
     <div class="venue">Advanced Science, e2500589, 2025 &nbsp;·&nbsp; <a href="#">PDF</a></div>
   </div>
@@ -273,6 +274,10 @@
     <div class="teaching-time">Spring 2015 – 2016</div>
     <div class="teaching-content"><strong>Calculus II</strong><span>Teaching Assistant · University of Science and Technology of China</span></div>
   </div>
+  <div class="teaching-entry">
+    <div class="teaching-time">Fall 2016 – 2017</div>
+    <div class="teaching-content"><strong>Mathematics Teacher</strong><span>NO.1 Middle School Affiliated to Central China Normal University, Wuhan, China</span></div>
+  </div>
 </div>
 
 <!-- CV -->
@@ -285,7 +290,7 @@
   </iframe>
   <div style="text-align:center; margin-top:1.2rem;">
     <a href="Pei_Zhang_CV.pdf" target="_blank"
-      style="display:inline-block; padding:10px 24px; background:#6b1a3a; color:#fff;
+      style="display:inline-block; padding:10px 24px; background:var(--accent); color:#fff;
              font-family:-apple-system,sans-serif; font-size:14px; border-radius:4px;">
       ↓ Download PDF
     </a>
@@ -337,7 +342,6 @@
     <a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ&hl=en" target="_blank" title="Google Scholar">
       <i class="ai ai-google-scholar"></i>
     </a>
-
   </div>
   <div class="footer-copy">Copyright &copy; 2026 Pei Zhang</div>
 </footer>
