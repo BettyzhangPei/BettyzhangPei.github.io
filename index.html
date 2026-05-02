@@ -19,12 +19,42 @@
   a { color: #6b1a3a; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; }
-  nav .sitename { font-size: 15px; color: #222; font-family: -apple-system, sans-serif; }
-  nav ul { list-style: none; display: flex; gap: 2rem; }
-  nav ul li a { font-size: 14px; color: #555; font-family: -apple-system, sans-serif; }
-  nav ul li a:hover, nav ul li a.active { color: #222; text-decoration: none; font-weight: 600; }
 
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f;}
+
+nav .sitename {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav ul li a {
+  font-size: 14px;
+  color: #ccc;
+  font-family: -apple-system, sans-serif;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a.active {
+  color: #ff5c8a;
+  font-weight: 600;
+}
+
+
+
+
+
+ 
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
 
@@ -56,6 +86,40 @@
 }
 
 
+
+.teaching-entry {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.teaching-time {
+  width: 160px;
+  font-size: 14px;
+  color: #888;
+  font-family: -apple-system, sans-serif;
+  flex-shrink: 0;
+}
+
+.teaching-content strong {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+}
+
+.teaching-content span {
+  font-size: 15px;
+  color: #555;
+  font-family: -apple-system, sans-serif;
+}
+
+
+
+
+
+
+
+ 
 
 
 .gallery-container {
@@ -364,124 +428,55 @@
   </div>
 </div>
 
+
+ 
+<!-- Teaching -->
+ <h2 class="sh">Teaching</h2>
+
+<div class="teaching-entry">
+  <div class="teaching-time">Fall 2019</div>
+  <div class="teaching-content">
+    <strong>Sampling Theory (STAT440)</strong>
+    <span>Grader, UMD</span>
+  </div>
+</div>
+
+<div class="teaching-entry">
+  <div class="teaching-time">Spring 2020</div>
+  <div class="teaching-content">
+    <strong>Introduction to Linear Algebra (MATH240)</strong>
+    <span>Teaching Assistant, UMD</span>
+  </div>
+</div>
+
+<div class="teaching-entry">
+  <div class="teaching-time">Fall 2020 &amp; Spring 2021</div>
+  <div class="teaching-content">
+    <strong>Elementary Probability and Statistics (STAT100)</strong>
+    <span>Teaching Assistant, UMD</span>
+  </div>
+</div>
+
+<div class="teaching-entry">
+  <div class="teaching-time">Spring 2015 &amp; 2016</div>
+  <div class="teaching-content">
+    <strong>Calculus II</strong>
+    <span>Teaching Assistant, USTC</span>
+  </div>
+</div>
+
+
+
+ 
 <!-- CV -->
 <div class="page" id="pg-cv">
   <h1 class="page-title">CV &nbsp;<a href="Pei_Zhang_CV.pdf" target="_blank" 
                                    style="font-size:14px;font-family:-apple-system,sans-serif;font-weight:normal;">[Download PDF]</a></h1>
 
-  <h2 class="sh">Education</h2>
-  <div class="cv-entry">
-    <div class="cv-year">2019/09 – 2025/05</div>
-    <div class="cv-detail">
-      <strong>Ph.D. in Mathematical Statistics, University of Maryland, College Park (UMD)</strong>
-      <em>Dissertation: Mixed Modeling Approaches for Characterizing Genetic Effects and Heritability Metrics in Longitudinal Phenotypes (NIH Outstanding Graduate Research)</em>
-      <span>Primary Advisors: Drs. Paul S. Albert (NIH Biostatistics) and Doron Levy (UMD Applied Mathematics)</span>
-      <span>Co-advisors: Drs. Jianxin Shi and Hyokyoung G. Hong (NIH Biostatistics)</span>
-    </div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2014/09 – 2016/06</div>
-    <div class="cv-detail">
-      <strong>M.S. in Mathematics, University of Science and Technology of China (USTC)</strong>
-      <em>Dissertation: Ekeland Index Theory for Periodic Solutions and Symmetric Periodic Solutions of Convex Hamiltonian Systems</em>
-      <span>Advisor: Dr. Xinan Ma &nbsp;·&nbsp; Co-advisor: Dr. Hui Liu</span>
-    </div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2010/09 – 2014/06</div>
-    <div class="cv-detail">
-      <strong>B.S. in Mathematics and Applied Mathematics (Teacher Education Program), Nanjing Normal University (NNU)</strong>
-      <em>Dissertation: Some Problems in Hamiltonian Systems (NNU Outstanding Graduation Thesis)</em>
-      <span>Advisor: Dr. Yujun Dong</span>
-    </div>
-  </div>
 
-  <h2 class="sh">Employment</h2>
-  <div class="cv-entry">
-    <div class="cv-year">2025/05 – present</div>
-    <div class="cv-detail">
-      <strong>Postdoctoral Fellow</strong>
-      <span>Biostatistics Branch (BB), DCEG, National Cancer Institute (NCI), NIH</span>
-      <span>Mentored by Drs. Paul S. Albert and Jianxin Shi</span>
-    </div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2021/09 – 2025/05</div>
-    <div class="cv-detail">
-      <strong>Predoctoral Fellow</strong>
-      <span>BB, DCEG, NCI, NIH</span>
-      <span>Mentored by Drs. Paul S. Albert, Jianxin Shi, and Hyokyoung G. Hong</span>
-    </div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2019/08 – 2021/08</div>
-    <div class="cv-detail"><strong>Teaching Assistant</strong><span>Department of Mathematics, UMD</span></div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2016/08 – 2017/04</div>
-    <div class="cv-detail"><strong>Mathematics Teacher</strong><span>NO.1 Middle School Affiliated to Central China Normal University, Wuhan, China</span></div>
-  </div>
-  <div class="cv-entry">
-    <div class="cv-year">2014/09 – 2016/06</div>
-    <div class="cv-detail"><strong>Teaching Assistant</strong><span>Department of Mathematics, USTC</span></div>
-  </div>
 
-  <h2 class="sh">Honors &amp; Awards (Selected)</h2>
-  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>NCI Early K99/R00 Grant Application — Rated as "Competitive, Not Discussed"</span><span>NSF Travel Support Award &nbsp;·&nbsp; IMS New Researcher Travel Award</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2025 &amp; 2026</div><div class="cv-detail"><span>NIH Postdoctoral Fellowship (twice)</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2025</div><div class="cv-detail"><span>NCI-DCEG Institutional Nominee for NCI Pathway to Independence Award (K99/R00)</span><span>NIH Fellows Award for Research Excellence (FARE) 2026 — top 25% of all applicants</span><span>NIH Outstanding Graduate Research</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2023 &amp; 2024</div><div class="cv-detail"><span>Women in Statistics and Data Science Conference Student Travel Award (twice)</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2021 – 2024</div><div class="cv-detail"><span>NIH Predoctoral Fellowship (4 times) &nbsp;·&nbsp; UMD Tuition Award for External Fellowship (4 times)</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2019 &amp; 2020</div><div class="cv-detail"><span>UMD Dean's Fellowship (twice)</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2016</div><div class="cv-detail"><span>USTC Outstanding Graduate</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2014</div><div class="cv-detail"><span>NNU Outstanding Graduate &nbsp;·&nbsp; NNU First Award of Feng Ruer Scholarship &nbsp;·&nbsp; NNU Outstanding Dissertation</span></div></div>
 
-  <h2 class="sh">Academic Activities (Selected)</h2>
-  <h3 class="ssh">Invited Talks / Seminars</h3>
-  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>International Biometric Conference (IBC), Seoul, South Korea</span><span>Biostatistics Branch of NCI-DCEG Works in Progress, Rockville, MD</span></div></div>
-
-  <h3 class="ssh">Contributed Presentations</h3>
-  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><span>ASHG Annual Meeting, Montreal &nbsp;·&nbsp; JSM, Boston &nbsp;·&nbsp; 11th Workshop on Biostatistics and Bioinformatics, Georgia State University</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2025</div><div class="cv-detail"><span>JSM, Nashville &nbsp;·&nbsp; 17th Annual NCI-DCEG Fellows' Training Symposium, Rockville, MD</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2024</div><div class="cv-detail"><span>JSM, Portland &nbsp;·&nbsp; AI Day for Federal Statistics, National Academy of Sciences, Washington DC &nbsp;·&nbsp; NIH Annual Graduate Student Research Symposium</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2023</div><div class="cv-detail"><span>WSDS, Seattle &nbsp;·&nbsp; JSM, Toronto</span></div></div>
-
-  <h2 class="sh">Teaching</h2>
-  <div class="cv-entry"><div class="cv-year">Fall 2019</div><div class="cv-detail"><strong>Sampling Theory (STAT440)</strong><span>Grader, UMD</span></div></div>
-  <div class="cv-entry"><div class="cv-year">Spring 2020</div><div class="cv-detail"><strong>Introduction to Linear Algebra (MATH240)</strong><span>Teaching Assistant, UMD</span></div></div>
-  <div class="cv-entry"><div class="cv-year">Fall 2020 &amp; Spring 2021</div><div class="cv-detail"><strong>Elementary Probability and Statistics (STAT100)</strong><span>Teaching Assistant, UMD</span></div></div>
-  <div class="cv-entry"><div class="cv-year">Spring 2015 &amp; 2016</div><div class="cv-detail"><strong>Calculus II</strong><span>Teaching Assistant, USTC</span></div></div>
-
-  <h2 class="sh">Service</h2>
-  <div class="cv-entry"><div class="cv-year">2021 – present</div><div class="cv-detail"><strong>Journal Reviewer</strong><span>Biometrics · Statistics in Medicine · Journal of Biopharmaceutical Statistics · Frontiers in Oncology · LabMed Discovery</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2026</div><div class="cv-detail"><strong>Chief Judge</strong><span>NIH Fellows Award for Research Excellence (FARE) 2027 Competition</span></div></div>
-  <div class="cv-entry"><div class="cv-year">2022 – 2023</div><div class="cv-detail"><strong>Vice President</strong><span>Women in Mathematics, University of Maryland, College Park</span></div></div>
-
-  <h2 class="sh">Skills</h2>
-  <div class="cv-entry"><div class="cv-year">Programming</div><div class="cv-detail"><span>R · Python · C/C++ · SQL · Jupyter Notebook</span></div></div>
-  <div class="cv-entry"><div class="cv-year">Infrastructure</div><div class="cv-detail"><span>NIH Biowulf HPC · All of Us Research Hub · UK Biobank</span></div></div>
-  <div class="cv-entry"><div class="cv-year">Writing</div><div class="cv-detail"><span>LaTeX · R Markdown · Git</span></div></div>
-
-  <h2 class="sh">References</h2>
-  <div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:0.5rem;">
-    <div style="font-size:14px;min-width:220px;">
-      <strong><a href="https://dceg.cancer.gov/about/staff-directory/albert-paul">Paul S. Albert</a></strong><br>
-      <span style="color:#555;">Senior Investigator &amp; Director, Biostatistics Branch, DCEG, NCI, NIH</span><br>
-      <a href="mailto:albertp@mail.nih.gov">albertp@mail.nih.gov</a>
-    </div>
-    <div style="font-size:14px;min-width:220px;">
-      <strong><a href="https://dceg.cancer.gov/about/staff-directory/shi-jianxin">Jianxin Shi</a></strong><br>
-      <span style="color:#555;">Senior Investigator, Biostatistics Branch, DCEG, NCI, NIH</span><br>
-      <a href="mailto:jianxin.shi@nih.gov">jianxin.shi@nih.gov</a>
-    </div>
-    <div style="font-size:14px;min-width:220px;">
-      <strong>Doron Levy</strong><br>
-      <span style="color:#555;">Professor &amp; Chair, Department of Mathematics, University of Maryland</span><br>
-      <a href="mailto:dlevy@umd.edu">dlevy@umd.edu</a>
-    </div>
-  </div>
-</div>
-
+ 
 <!-- LINKS -->
 <div class="page" id="pg-links">
   <h1 class="page-title">Links</h1>
