@@ -20,35 +20,12 @@
   a:hover { text-decoration: underline; }
 
 
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f;}
-
-nav .sitename {
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
-}
-
-nav ul li a {
-  font-size: 14px;
-  color: #ccc;
-  font-family: -apple-system, sans-serif;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #fff;
-}
-
-nav ul li a.active {
-  color: #ff5c8a;
-  font-weight: 600;
-}
+nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f;}
+nav .sitename { font-size: 18px; font-weight: 500; color: #fff;}
+nav ul { list-style: none; display: flex; gap: 2.5rem; }
+nav ul li a { font-size: 14px; color: #ccc; font-family: -apple-system, sans-serif; text-decoration: none; }
+nav ul li a:hover { color: #fff; }
+nav ul li a.active { color: #ff5c8a; font-weight: 600; }
 
 
 
@@ -217,6 +194,7 @@ nav ul li a.active {
   <ul>
     <li><a href="#" class="active" onclick="return show('home',this)">Home</a></li>
     <li><a href="#" onclick="return show('research',this)">Research</a></li>
+    <li><a href="#" onclick="return show('teaching',this)">Teaching</a></li>
     <li><a href="#" onclick="return show('cv',this)">CV</a></li>
     <li><a href="#" onclick="return show('links',this)">Links</a></li>
     <li><a href="#" onclick="return show('gallery',this)">Gallery</a></li>
@@ -431,40 +409,44 @@ nav ul li a.active {
 
  
 <!-- Teaching -->
- <h2 class="sh">Teaching</h2>
+<div class="page" id="pg-teaching">
+  <h1 class="page-title">Teaching</h1>
 
-<div class="teaching-entry">
-  <div class="teaching-time">Fall 2019</div>
-  <div class="teaching-content">
-    <strong>Sampling Theory (STAT440)</strong>
-    <span>Grader, UMD</span>
+  <h2 class="sh">Experience</h2>
+
+  <div class="teaching-entry">
+    <div class="teaching-time">Fall 2019</div>
+    <div class="teaching-content">
+      <strong>Sampling Theory (STAT440)</strong>
+      <span>Grader · University of Maryland, College Park</span>
+    </div>
   </div>
-</div>
 
-<div class="teaching-entry">
-  <div class="teaching-time">Spring 2020</div>
-  <div class="teaching-content">
-    <strong>Introduction to Linear Algebra (MATH240)</strong>
-    <span>Teaching Assistant, UMD</span>
+  <div class="teaching-entry">
+    <div class="teaching-time">Spring 2020</div>
+    <div class="teaching-content">
+      <strong>Introduction to Linear Algebra (MATH240)</strong>
+      <span>Teaching Assistant · University of Maryland, College Park</span>
+    </div>
   </div>
-</div>
 
-<div class="teaching-entry">
-  <div class="teaching-time">Fall 2020 &amp; Spring 2021</div>
-  <div class="teaching-content">
-    <strong>Elementary Probability and Statistics (STAT100)</strong>
-    <span>Teaching Assistant, UMD</span>
+  <div class="teaching-entry">
+    <div class="teaching-time">Fall 2020 – Spring 2021</div>
+    <div class="teaching-content">
+      <strong>Elementary Probability and Statistics (STAT100)</strong>
+      <span>Teaching Assistant · University of Maryland, College Park</span>
+    </div>
   </div>
-</div>
 
-<div class="teaching-entry">
-  <div class="teaching-time">Spring 2015 &amp; 2016</div>
-  <div class="teaching-content">
-    <strong>Calculus II</strong>
-    <span>Teaching Assistant, USTC</span>
+  <div class="teaching-entry">
+    <div class="teaching-time">Spring 2015 – 2016</div>
+    <div class="teaching-content">
+      <strong>Calculus II</strong>
+      <span>Teaching Assistant · University of Science and Technology of China</span>
+    </div>
   </div>
-</div>
 
+</div>
 
 
  
