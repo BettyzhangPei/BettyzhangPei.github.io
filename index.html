@@ -6,166 +6,95 @@
 <title>Pei Zhang</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
- body { 
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 17px; 
-  color: #222; 
-  background: #fff; 
-  line-height: 1.75; 
-}
-.home-name {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-}
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; color: #222; background: #fff; line-height: 1.75; }
+  .home-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
   a { color: #6b1a3a; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f; }
+  nav .sitename { font-size: 18px; font-weight: 500; color: #fff; }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+  nav ul li a { font-size: 14px; color: #ccc; font-family: -apple-system, sans-serif; text-decoration: none; }
+  nav ul li a:hover { color: #fff; }
+  nav ul li a.active { color: #ff5c8a; font-weight: 600; }
 
-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f;}
-nav .sitename { font-size: 18px; font-weight: 500; color: #fff;}
-nav ul { list-style: none; display: flex; gap: 2.5rem; }
-nav ul li a { font-size: 14px; color: #ccc; font-family: -apple-system, sans-serif; text-decoration: none; }
-nav ul li a:hover { color: #fff; }
-nav ul li a.active {
-  color: #ff5c8a;
-  font-weight: 600;
-  background: none;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
+  /* Search overlay */
+  .search-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.97);
+    padding: 24px 48px;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .search-overlay.open { display: block; }
+  .search-overlay-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #1f1f1f;
+    padding-bottom: 8px;
+  }
+  .search-overlay-inner input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: #222;
+    background: transparent;
+  }
+  .search-overlay-inner input::placeholder { color: #aaa; }
+  .search-close {
+    background: none; border: none; font-size: 22px;
+    cursor: pointer; color: #888; line-height: 1;
+  }
+  .search-close:hover { color: #222; }
+  #search-results {
+    max-width: 680px;
+    margin: 16px auto 0;
+    font-size: 15px;
+    font-family: -apple-system, sans-serif;
+  }
+  #search-results a { color: #6b1a3a; display: block; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+  #search-results a:hover { text-decoration: underline; }
 
-
-
-
-
- 
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
 
-  .home-photo-img {
-  width: 240px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+  .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 
- .mentor {
-  color: #6b1a3a;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(107, 26, 58, 0.6);
-  transition: all 0.2s ease;
-}
+  .mentor { color: #6b1a3a; text-decoration: none; border-bottom: 1px solid rgba(107,26,58,0.6); transition: all 0.2s ease; }
+  .mentor:hover { border-bottom-color: #6b1a3a; }
 
-.mentor:hover {
-  border-bottom-color: #6b1a3a;
-}
+  .contact-list { margin-top: 1.4rem; font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Noto Color Emoji", Arial, sans-serif; color: #444; }
+  .contact-list div { margin-bottom: 4px; }
 
- .contact-list {
-  margin-top: 1.4rem;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               "Segoe UI Emoji", "Noto Color Emoji", Arial, sans-serif;
-  color: #444;
-}
+  .teaching-entry { display: flex; gap: 1.6rem; margin-bottom: 1.2rem; }
+  .teaching-time { width: 160px; font-size: 14px; color: #888; font-family: -apple-system, sans-serif; flex-shrink: 0; }
+  .teaching-content strong { font-size: 18px; font-weight: 600; display: block; }
+  .teaching-content span { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; }
 
+  .gallery-container { display: flex; flex-direction: column; gap: 1.8rem; align-items: center; }
+  .gallery-container figure { max-width: 520px; text-align: center; }
+  .gallery-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .gallery-container figcaption { margin-top: 0.5rem; font-size: 13px; color: #666; }
 
-
-.teaching-entry {
-  display: flex;
-  gap: 1.6rem;
-  margin-bottom: 1.2rem;
-}
-
-.teaching-time {
-  width: 160px;
-  font-size: 14px;
-  color: #888;
-  font-family: -apple-system, sans-serif;
-  flex-shrink: 0;
-}
-
-.teaching-content strong {
-  font-size: 18px;
-  font-weight: 600;
-  display: block;
-}
-
-.teaching-content span {
-  font-size: 15px;
-  color: #555;
-  font-family: -apple-system, sans-serif;
-}
-
-
-
-
-
-
-
- 
-
-
-.gallery-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  align-items: center;
-}
-
-.gallery-container figure {
-  max-width: 520px;
-  text-align: center;
-}
-
-.gallery-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.gallery-container figcaption {
-  margin-top: 0.5rem;
-  font-size: 13px;
-  color: #666;
-}
-
-
-
-
-
-
-
-
- 
-
-  /* HOME */
   .home-name { font-size: 42px; font-weight: normal; color: #6b1a3a; margin-bottom: 2.5rem; }
   .home-body { display: flex; gap: 3rem; align-items: flex-start; }
   .home-text { flex: 1; font-size: 16px; color: #222; }
   .home-text p + p { margin-top: 1em; }
   .home-photo { width: 240px; flex-shrink: 0; }
-  .photo-placeholder { width: 240px; height: 300px; background: #e8d5dc; border-radius: 2px; display: flex; align-items: center; justify-content: center; color: #6b1a3a; font-size: 13px; font-family: -apple-system, sans-serif; text-align: center; padding: 1rem; }
-  .contact-list { margin-top: 1.4rem; font-size: 14px; font-family: -apple-system, sans-serif; color: #444; }
-  .contact-list div { margin-bottom: 4px; }
-  .contact-list {
-  margin-top: 1.4rem;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               "Segoe UI Emoji", "Noto Color Emoji", Arial, sans-serif;
-  color: #444;
-}
 
-  /* PAGE TITLES */
-  .page-title { font-size: 28px; font-weight: normal; color: #6b1a3a; margin-bottom: 2rem; }
+  .page-title { font-size: 28px; font-weight: normal; color: #6b1a3a; margin-bottom: 2rem; text-align: center; }
 
-  /* SECTION HEADS */
   h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
   h2.sh:first-of-type { margin-top: 0; }
   h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: #555; margin: 1.2rem 0 0.5rem; }
 
-  /* CV ENTRIES */
   .cv-entry { display: flex; gap: 1.4rem; margin-bottom: 0.9rem; }
   .cv-year { font-size: 13px; color: #999; font-family: -apple-system, sans-serif; min-width: 110px; padding-top: 3px; flex-shrink: 0; }
   .cv-detail { font-size: 15px; }
@@ -173,7 +102,6 @@ nav ul li a.active {
   .cv-detail span { font-size: 13.5px; color: #555; font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
   .cv-detail em { font-size: 13.5px; color: #777; font-family: -apple-system, sans-serif; font-style: italic; display: block; }
 
-  /* PUBLICATIONS */
   .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid #ddd; }
   .pub .ptitle { font-size: 15px; }
   .pub .ptitle a { color: #6b1a3a; }
@@ -181,7 +109,6 @@ nav ul li a.active {
   .pub .venue { font-size: 13px; color: #888; font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
   .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: #6b1a3a; color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; flex-shrink: 0; }
 
-  /* LINKS */
   .links-section { margin-bottom: 1.8rem; }
   .links-section h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin-bottom: 0.6rem; border-bottom: 1px solid #eee; padding-bottom: 4px; }
   .link-row { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; border-bottom: 0.5px solid #f5f5f5; font-family: -apple-system, sans-serif; font-size: 14.5px; }
@@ -190,16 +117,11 @@ nav ul li a.active {
   .link-row a { color: #1a5276; }
   .link-row .ldesc { color: #888; font-size: 13px; }
 
-  /* GALLERY */
   .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
-  .gallery-frame { width: 100%; border: none; border-radius: 4px; min-height: 600px; }
 
-  /* SEARCh */
- .search-btn { background: none; border: none; color: #ccc; font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;cursor: pointer; line-height: 1; padding: 0;}
- .search-btn:hover { color: #ff5c8a; }
+  .search-btn { background: none; border: none; color: #ccc; font-size: 16px; font-family: -apple-system, sans-serif; cursor: pointer; line-height: 1; padding: 0; }
+  .search-btn:hover { color: #ff5c8a; }
 
-
-  /* FOOTNOTE LEGEND */
   .legend { font-size: 13px; color: #888; font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
 
   footer { text-align: center; font-size: 13px; color: #aaa; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #eee; }
@@ -210,49 +132,52 @@ nav ul li a.active {
 <nav>
   <div class="sitename">Pei Zhang</div>
   <ul>
-    <li><a href="#" class="active" onclick="return show('home',this)">Home</a></li>
-    <li><a href="#" onclick="return show('research',this)">Research</a></li>
-    <li><a href="#" onclick="return show('teaching',this)">Teaching</a></li>
-    <li><a href="#" onclick="return show('cv',this)">CV</a></li>
-    <li><a href="#" onclick="return show('links',this)">Links</a></li>
-    <li><a href="#" onclick="return show('gallery',this)">Gallery</a></li>
-    <li class="search-item"> <button class="search-btn" onclick="toggleSearch()" aria-label="Search"> &#128269; </button></li>
+    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+    <li><a href="#" class="nav-link" data-page="research">Research</a></li>
+    <li><a href="#" class="nav-link" data-page="teaching">Teaching</a></li>
+    <li><a href="#" class="nav-link" data-page="cv">CV</a></li>
+    <li><a href="#" class="nav-link" data-page="links">Links</a></li>
+    <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
+    <li><button class="search-btn" onclick="toggleSearch()" aria-label="Search">&#128269;</button></li>
   </ul>
 </nav>
 
+<!-- Search overlay -->
+<div id="search-overlay" class="search-overlay">
+  <div class="search-overlay-inner">
+    <span style="font-size:18px; color:#aaa;">&#128269;</span>
+    <input type="text" id="search-input" placeholder="Search this site..." onkeyup="siteSearch()" autocomplete="off">
+    <button class="search-close" onclick="toggleSearch()" aria-label="Close">&#x2715;</button>
+  </div>
+  <div id="search-results"></div>
+</div>
 
-
- 
 <!-- HOME -->
 <div class="page active" id="pg-home">
   <h1 class="home-name">Pei Zhang</h1>
   <div class="home-body">
     <div class="home-text">
-      <p>I am a Postdoctoral Fellow at the Biostatistics Branch, Division of Cancer Epidemiology &amp; Genetics, National Cancer Institute, National Institutes of Health, 
-       mentored by <a href="https://dceg.cancer.gov/about/staff-directory/albert-paul" class="mentor">Dr. Paul S. Albert</a> 
-       and <a href="https://dceg.cancer.gov/about/staff-directory/shi-jianxin" class="mentor">Dr. Jianxin Shi</a>.</p>
-     
+      <p>I am a Postdoctoral Fellow at the Biostatistics Branch, Division of Cancer Epidemiology &amp; Genetics, National Cancer Institute, National Institutes of Health,
+        mentored by <a href="https://dceg.cancer.gov/about/staff-directory/albert-paul" class="mentor">Dr. Paul S. Albert</a>
+        and <a href="https://dceg.cancer.gov/about/staff-directory/shi-jianxin" class="mentor">Dr. Jianxin Shi</a>.</p>
       <p>My research develops statistical and computational methods for longitudinal and correlated data, with applications to genetics, genomics, and cancer epidemiology.
-         I primaryly focus on approaches for characterizing genetic effects and heritability of longitudinal phenotypes, with applications to prostate cancer risk stratification and early detection.</p>
-     
-       
-      <p> My research sits at the intersection of statistics and public health. I am broadly interested in developing state-of-the-art statistical methods while asking scientifically meaningful questions about the etiology of human diseases.
-         My work has been published in leading journals across statistics and the life sciences, including <em>Biostatistics</em>, <em>Annals of Applied Statistics</em>, <em>Advanced Science</em>, and <em>Journal of Nutrition</em>.</p>
-     
-      <p>I earned my Ph.D. in Mathematical Statistics from the University of Maryland, College Park (2025).  I was very fortunate to be advised by <a href="https://math.umd.edu/~dlevy/" class="mentor">Dr. Doron Levy</a> and 
-       <a href="https://dceg.cancer.gov/about/staff-directory/albert-paul" class="mentor">Dr. Paul S. Albert</a> and co-mentored by  
+        I primarily focus on approaches for characterizing genetic effects and heritability of longitudinal phenotypes, with applications to prostate cancer risk stratification and early detection.</p>
+      <p>My research sits at the intersection of statistics and public health. I am broadly interested in developing state-of-the-art statistical methods while asking scientifically meaningful questions about the etiology of human diseases.
+        My work has been published in leading journals across statistics and the life sciences, including <em>Biostatistics</em>, <em>Annals of Applied Statistics</em>, <em>Advanced Science</em>, and <em>Journal of Nutrition</em>.</p>
+      <p>I earned my Ph.D. in Mathematical Statistics from the University of Maryland, College Park (2025). I was very fortunate to be advised by <a href="https://math.umd.edu/~dlevy/" class="mentor">Dr. Doron Levy</a> and
+        <a href="https://dceg.cancer.gov/about/staff-directory/albert-paul" class="mentor">Dr. Paul S. Albert</a> and co-mentored by
         <a href="https://dceg.cancer.gov/about/staff-directory/shi-jianxin" class="mentor">Dr. Jianxin Shi</a>
-        and <a href="https://dceg.cancer.gov/about/staff-directory/hong-grace" class="mentor">Dr. Hyokyoung G. Hong</a> 
-       through the <a href="https://www.training.nih.gov/research-training/grads/gpp/">NIH Graduate Partnerships Program</a>,
-       where I was recognized with the NIH Outstanding Graduate Research award. </p>
-       
+        and <a href="https://dceg.cancer.gov/about/staff-directory/hong-grace" class="mentor">Dr. Hyokyoung G. Hong</a>
+        through the <a href="https://www.training.nih.gov/research-training/grads/gpp/">NIH Graduate Partnerships Program</a>,
+        where I was recognized with the NIH Outstanding Graduate Research award.</p>
+
       <div style="margin-top:2rem;">
         <div style="display:flex; gap:3rem; flex-wrap:wrap;">
           <div style="flex:1; min-width:200px;">
             <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Research Interests</div>
             <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.9;">
               <li>Longitudinal &amp; correlated data methodology</li>
-              <li>Statistical genetics &amp; genomics (EHR, RWD, PLCO,All of Us, UK Biobank)</li>
+              <li>Statistical genetics &amp; genomics (EHR, RWD, PLCO, All of Us, UK Biobank)</li>
               <li>Machine learning in cancer epidemiology</li>
               <li>Nutritional epidemiology &amp; metabolomics</li>
             </ul>
@@ -271,100 +196,37 @@ nav ul li a.active {
         </div>
       </div>
 
-     <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
-  <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">
-    News
-  </div>
-
-  <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
-
-    <li>
-      <strong>2026-08-03</strong> — Contributed Talk on <em>heritability estimation of longitudinal EHR traits under informative measurement processes</em>.
-      <div style="color:#777; font-size:13.5px;">
-        JSM 2026, Boston, MA
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#6b1a3a; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">News</div>
+        <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
+          <li><strong>2026-08-03</strong> — Contributed Talk on <em>heritability estimation of longitudinal EHR traits under informative measurement processes</em>.<div style="color:#777; font-size:13.5px;">JSM 2026, Boston, MA</div></li>
+          <li><strong>2026-07</strong> — Invited talk on heritability analysis for longitudinal phenotypes.<div style="color:#777; font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
+          <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change</a>.<div style="color:#777; font-size:13.5px;">Biostatistics</div></li>
+          <li><strong>2026-03</strong> — Awards: <a href="https://imstat.org/2026/04/29/recipients-of-the-2026-ims-new-researcher-travel-awards-announced/">IMS New Researcher Travel Award</a>, <a href="https://math.gsu.edu/yichuan/2026Workshop/">NSF Travel Award</a>.</li>
+          <li><strong>2026-03</strong> — Service: Committee member and Chief Judge, <a href="https://www.training.nih.gov/felcom/fare/">NIH FARE Award 2027 Competition</a>.</li>
+          <li><strong>2025-07-08</strong> — <a href="https://www.training.nih.gov/felcom/fare/">NIH FARE Award 2026</a> (top 25%).</li>
+          <li><strong>2025-03-22</strong> — Paper accepted: <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">Mixed Modeling Approach for Characterizing Genetic Effects</a>.<div style="color:#777; font-size:13.5px;">Annals of Applied Statistics</div></li>
+        </ul>
       </div>
-    </li>
-
-    <li>
-      <strong>2026-07</strong> — Invited talk on heritability analysis for longitudinal phenotypes.
-      <div style="color:#777; font-size:13.5px;">
-        IBC 2026, Seoul, South Korea
-      </div>
-    </li>
-
-    <li>
-      <strong>2026-04</strong> — Paper accepted:
-      <a href="https://arxiv.org/abs/2505.04773">
-        Estimating the Heritability of Longitudinal Rate-of-Change
-      </a>.
-      <div style="color:#777; font-size:13.5px;">
-        Biostatistics
-      </div>
-    </li>
-
-    <li>
-      <strong>2026-03</strong> — Awards:
-      <a href="https://imstat.org/2026/04/29/recipients-of-the-2026-ims-new-researcher-travel-awards-announced/">
-        IMS New Researcher Travel Award
-      </a>, 
-      <a href="https://math.gsu.edu/yichuan/2026Workshop/">
-        NSF Travel Award
-      </a>.
-    </li>
-
-    <li>
-      <strong>2026-03</strong> — Service:
-      Committee member and Chief Judge, 
-      <a href="https://www.training.nih.gov/felcom/fare/">
-        NIH FARE Award 2027 Competition
-      </a>.
-    </li>
-
-    <li>
-      <strong>2025-07-08</strong> — 
-      <a href="https://www.training.nih.gov/felcom/fare/">
-        NIH FARE Award 2026
-      </a> (top 25%).
-    </li>
-
-    <li>
-      <strong>2025-03-22</strong> — Paper accepted:
-      <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">
-        Mixed Modeling Approach for Characterizing Genetic Effects
-      </a>.
-      <div style="color:#777; font-size:13.5px;">
-        Annals of Applied Statistics
-      </div>
-    </li>
-
-  </ul>
-</div>
 
       <div style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid #eee; font-family:-apple-system,sans-serif; font-size:14.5px; color:#333;">
         <div>Email: <a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
         <div style="margin-top:4px;">Office: 9609 Medical Center Dr, Room 7E614, Rockville, MD 20850, USA</div>
       </div>
-
-      <div class="contact-list" style="display:none;">
-        <div> ✉ <a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
-        <div>📍 9609 Medical Center Dr, Room 7E614, Rockville, MD 20850, USA</div>
-        <div> ☎ +1 (240) 992-7823</div>
-      </div>
     </div>
-     <div class="home-photo">
-      <img src="Pei_Zhang.jpeg" alt="Pei Zhang" class="home-photo-img"> 
+    <div class="home-photo">
+      <img src="Pei_Zhang.jpeg" alt="Pei Zhang" class="home-photo-img">
     </div>
   </div>
-</div>
+</div><!-- end #pg-home -->
 
 <!-- RESEARCH -->
 <div class="page" id="pg-research">
   <h1 class="page-title">Research</h1>
-
   <h2 class="sh">Research Interests</h2>
-  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Longitudinal &amp; correlated data methodology</strong> <span>Repeated-measures analysis, biomarker studies, and complex dependent data structures.</span></div></div>
-  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; computational methods in genetics and genomics</strong> <span>Electronic health records (EHR), real-world data (RWD), and large-scale population studies (e.g., PLCO Cancer Screening Trial) — prostate cancer risk stratification, early detection, and prediction.</span></div></div>
-  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; machine learning in epidemiology</strong> <span>Cancer genetic epidemiology, nutritional epidemiology, and metabolomics.</span></div></div>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Longitudinal &amp; correlated data methodology</strong><span>Repeated-measures analysis, biomarker studies, and complex dependent data structures.</span></div></div>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; computational methods in genetics and genomics</strong><span>Electronic health records (EHR), real-world data (RWD), and large-scale population studies (e.g., PLCO Cancer Screening Trial) — prostate cancer risk stratification, early detection, and prediction.</span></div></div>
+  <div class="cv-entry" style="margin-bottom:0.6rem;"><div class="cv-detail" style="font-size:15px;"><strong>Statistical &amp; machine learning in epidemiology</strong><span>Cancer genetic epidemiology, nutritional epidemiology, and metabolomics.</span></div></div>
 
   <h2 class="sh">Publications</h2>
   <div class="legend">* corresponding author &nbsp;† co-first / equal contribution &nbsp;‡ alphabetical order</div>
@@ -426,229 +288,140 @@ nav ul li a.active {
     <div class="authors">Measurement error models for bias correction in food frequency questionnaire–based dietary intake assessment.</div>
     <div class="venue"><a href="#">GitHub</a> &nbsp;·&nbsp; <a href="#">Paper</a></div>
   </div>
-</div>
+</div><!-- end #pg-research -->
 
-
- 
-<!-- Teaching -->
+<!-- TEACHING -->
 <div class="page" id="pg-teaching">
   <h1 class="page-title">Teaching</h1>
-
   <h2 class="sh">Experience</h2>
-
   <div class="teaching-entry">
     <div class="teaching-time">Fall 2019</div>
-    <div class="teaching-content">
-      <strong>Sampling Theory (STAT440)</strong>
-      <span>Grader · University of Maryland, College Park</span>
-    </div>
+    <div class="teaching-content"><strong>Sampling Theory (STAT440)</strong><span>Grader · University of Maryland, College Park</span></div>
   </div>
-
   <div class="teaching-entry">
     <div class="teaching-time">Spring 2020</div>
-    <div class="teaching-content">
-      <strong>Introduction to Linear Algebra (MATH240)</strong>
-      <span>Teaching Assistant · University of Maryland, College Park</span>
-    </div>
+    <div class="teaching-content"><strong>Introduction to Linear Algebra (MATH240)</strong><span>Teaching Assistant · University of Maryland, College Park</span></div>
   </div>
-
   <div class="teaching-entry">
     <div class="teaching-time">Fall 2020 – Spring 2021</div>
-    <div class="teaching-content">
-      <strong>Elementary Probability and Statistics (STAT100)</strong>
-      <span>Teaching Assistant · University of Maryland, College Park</span>
-    </div>
+    <div class="teaching-content"><strong>Elementary Probability and Statistics (STAT100)</strong><span>Teaching Assistant · University of Maryland, College Park</span></div>
   </div>
-
   <div class="teaching-entry">
     <div class="teaching-time">Spring 2015 – 2016</div>
-    <div class="teaching-content">
-      <strong>Calculus II</strong>
-      <span>Teaching Assistant · University of Science and Technology of China</span>
-    </div>
+    <div class="teaching-content"><strong>Calculus II</strong><span>Teaching Assistant · University of Science and Technology of China</span></div>
   </div>
+</div><!-- end #pg-teaching -->
 
-</div>
-
-
- 
-<!-- CV -->
+<!-- FIX 1: CV page now properly opened and closed -->
 <div class="page" id="pg-cv">
-  <h1 class="page-title">CV &nbsp;<a href="Pei_Zhang_CV.pdf" target="_blank" 
-                                   style="font-size:14px;font-family:-apple-system,sans-serif;font-weight:normal;">[Download PDF]</a></h1>
+  <h1 class="page-title">CV</h1>
+  <iframe src="Pei_Zhang_CV.pdf" width="100%" height="800px"
+    style="border: none; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+    Your browser does not support embedded PDFs.
+    <a href="Pei_Zhang_CV.pdf" target="_blank">Click here to download.</a>
+  </iframe>
+  <div style="text-align:center; margin-top:1.2rem;">
+    <a href="Pei_Zhang_CV.pdf" target="_blank"
+      style="display:inline-block; padding:10px 24px; background:#6b1a3a; color:#fff;
+             font-family:-apple-system,sans-serif; font-size:14px; border-radius:4px;">
+      ↓ Download PDF
+    </a>
+  </div>
+</div><!-- end #pg-cv -->
 
-
-
-
- 
-<!-- LINKS -->
+<!-- FIX 2: Links section is now fully inside #pg-links -->
 <div class="page" id="pg-links">
   <h1 class="page-title">Links</h1>
+  <ul style="list-style:none; padding:0; font-size:18px; line-height:2.8;">
+    <li><a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ" target="_blank">Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0001-9332-4917" target="_blank">ORCID</a></li>
+    <li><a href="https://github.com/BettyzhangPei" target="_blank">GitHub</a></li>
+    <li><a href="https://dceg.cancer.gov/fellowship-training/fellowship-experience/meet-fellows/bb/zhang-pei" target="_blank">NIH profile page</a></li>
+  </ul>
+</div><!-- end #pg-links -->
 
-  <div class="links-section">
-    <h3>Academic Profiles</h3>
-
-    <div class="link-row">
-      <span class="link-badge">Google Scholar</span>
-      <a href="https://scholar.google.com/citations?user=kPMGDoEAAAAJ" target="_blank">
-        Publications and citations
-      </a>
-    </div>
-
-    <div class="link-row">
-      <span class="link-badge">ORCID</span>
-      <a href="https://orcid.org/0000-0001-9332-4917">Research identifier</a>
-    </div>
-
-    <div class="link-row">
-      <span class="link-badge">GitHub</span>
-      <a href="https://github.com/BettyzhangPei" target="_blank">
-        Code repositories
-      </a>
-    </div>
-
-    <div class="link-row">
-      <span class="link-badge">DCEG</span>
-      <a href="https://dceg.cancer.gov/fellowship-training/fellowship-experience/meet-fellows/bb/zhang-pei" target="_blank">
-        NIH profile page
-      </a>
-    </div>
-  </div>
-</div>
- 
-  <div class="links-section">
-    <h3>Code &amp; Software</h3>
-    <div class="link-row"><span class="link-badge">GitHub</span><a href="#">github.com/bettyzhangpei</a></div>
-    <div class="link-row"><span class="link-badge">Heritability-Velocity</span><a href="#">R package — GitHub</a><span class="ldesc">— Longitudinal heritability estimation</span></div>
-    <div class="link-row"><span class="link-badge">PLCO</span><a href="#">R package — GitHub</a><span class="ldesc">— PSA trajectory mixed-effects models</span></div>
-    <div class="link-row"><span class="link-badge">AARP</span><a href="#">R package — GitHub</a><span class="ldesc">— Dietary intake measurement error models</span></div>
-  </div>
-
-  <div class="links-section">
-    <h3>Professional &amp; Social</h3>
-    <div class="link-row"><span class="link-badge">LinkedIn</span><a href="#">linkedin.com/in/peizhang</a></div>
-    <div class="link-row"><span class="link-badge">Email</span><a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
-  </div>
-
-  <div class="links-section">
-    <h3>Institutional</h3>
-    <div class="link-row"><span class="link-badge">NIH / NCI</span><a href="https://dceg.cancer.gov/about/staff-directory/zhang-pei">NCI-DCEG Faculty Profile</a></div>
-    <div class="link-row"><span class="link-badge">Lab</span><a href="#">Biostatistics Branch, DCEG</a></div>
-  </div>
-</div>
-
-
-
- 
 <!-- GALLERY -->
 <div class="page" id="pg-gallery">
   <h1 class="page-title">Gallery</h1>
-
-  <p class="gallery-note">
-    Selected moments from research, academic events, and travel.
-  </p>
-
+  <p class="gallery-note">Selected moments from research, academic events, and travel.</p>
   <div class="gallery-container">
-
     <figure>
       <img src="images/commencement.JPG" alt="Commencement">
-      <figcaption>
-        Commencement Ceremony with mentors Paul S. Albert (left) and Doron Levy (right), May 21, 2025
-      </figcaption>
+      <figcaption>Commencement Ceremony with mentors Paul S. Albert (left) and Doron Levy (right), May 21, 2025</figcaption>
     </figure>
-
     <figure>
       <img src="images/defense.JPG" alt="Dissertation Defense">
-      <figcaption>
-        Ph.D. Dissertation Defense with committee members, Feb 4, 2025
-      </figcaption>
+      <figcaption>Ph.D. Dissertation Defense with committee members, Feb 4, 2025</figcaption>
     </figure>
-
     <figure>
       <img src="images/vail.JPG" alt="Skiing at Vail">
-      <figcaption>
-        First skiing at Vail Ski Resort, Colorado, Feb 2024
-      </figcaption>
+      <figcaption>First skiing at Vail Ski Resort, Colorado, Feb 2024</figcaption>
     </figure>
-
     <figure>
       <img src="images/yellowstone.jpg" alt="Yellowstone">
-      <figcaption>
-        Hiking at Yellowstone National Park, July 2025
-      </figcaption>
+      <figcaption>Hiking at Yellowstone National Park, July 2025</figcaption>
     </figure>
-
   </div>
-</div>
-
-
-<!-- SEARCH -->
-  <div id="search-box" class="search-box">
-  <input type="text" id="search-input" placeholder="Search this site..." onkeyup="siteSearch()">
-  <div id="search-results"></div>
-</div>
-
- 
+</div><!-- end #pg-gallery -->
 
 <footer>
   Last updated April 30, 2026 &nbsp;·&nbsp; Built with HTML &amp; CSS
 </footer>
 
-
- 
 <script>
-function show(id, el) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
-  document.getElementById('pg-' + id).classList.add('active');
-  el.classList.add('active');
-  window.scrollTo(0, 0);
-  return false;
-}
-function toggleSearch() {
-  const box = document.getElementById("search-box");
-  const input = document.getElementById("search-input");
-
-  box.style.display = box.style.display === "block" ? "none" : "block";
-
-  if (box.style.display === "block") {
-    input.focus();
-  }
-}
-
-function siteSearch() {
-  const query = document.getElementById("search-input").value.toLowerCase();
-  const results = document.getElementById("search-results");
-
-  if (query.length < 2) {
-    results.innerHTML = "";
-    return;
+  // FIX 3 & 4: Rewritten show() to always find and highlight the correct nav link
+  function show(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+    document.getElementById('pg-' + pageId).classList.add('active');
+    const navLink = document.querySelector('.nav-link[data-page="' + pageId + '"]');
+    if (navLink) navLink.classList.add('active');
+    window.scrollTo(0, 0);
   }
 
-  const pages = document.querySelectorAll(".page");
-  let output = "";
+  // Attach click handlers to nav links via data-page attribute
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      show(this.dataset.page);
+    });
+  });
 
-  pages.forEach(page => {
-    const text = page.innerText.toLowerCase();
-    const title = page.querySelector(".page-title") 
-      ? page.querySelector(".page-title").innerText 
-      : "Home";
-
-    const pageId = page.id.replace("pg-", "");
-
-    if (text.includes(query)) {
-      output += `
-        <div style="padding:6px 0;">
-          <a href="#" onclick="show('${pageId}', this); return false;">
-            ${title}
-          </a>
-        </div>`;
+  function toggleSearch() {
+    const overlay = document.getElementById("search-overlay");
+    const input = document.getElementById("search-input");
+    overlay.classList.toggle("open");
+    if (overlay.classList.contains("open")) {
+      input.value = "";
+      document.getElementById("search-results").innerHTML = "";
+      input.focus();
+    }
+  }
+  // Close on Escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      document.getElementById("search-overlay").classList.remove("open");
     }
   });
 
-  results.innerHTML = output || "No results found.";
-}
- 
+  function siteSearch() {
+    const query = document.getElementById("search-input").value.toLowerCase();
+    const results = document.getElementById("search-results");
+    if (query.length < 2) { results.innerHTML = ""; return; }
+
+    const pages = document.querySelectorAll(".page");
+    let output = "";
+    pages.forEach(page => {
+      const text = page.innerText.toLowerCase();
+      const titleEl = page.querySelector(".page-title, .home-name");
+      const title = titleEl ? titleEl.innerText : "Home";
+      const pageId = page.id.replace("pg-", "");
+      if (text.includes(query)) {
+        output += `<div style="padding:6px 0;"><a href="#" onclick="show('${pageId}'); toggleSearch(); return false;">${title}</a></div>`;
+      }
+    });
+    results.innerHTML = output || "No results found.";
+  }
 </script>
 </body>
 </html>
