@@ -1,32 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO: Page Title -->
 <title>Pei Zhang, Ph.D. | Postdoctoral Fellow, NCI/DCEG, University of Maryland</title>
-
-<!-- SEO: Meta Description -->
 <meta name="description" content="Pei Zhang is a Postdoctoral Fellow at the Biostatistics Branch, Division of Cancer Epidemiology and Genetics (DCEG), National Cancer Institute (NCI), NIH. Ph.D. in Statistics from the University of Maryland, College Park (UMD). Research in longitudinal data, statistical genetics, and cancer epidemiology.">
-
-<!-- SEO: Keywords -->
 <meta name="keywords" content="Pei Zhang, NCI, DCEG, NIH, UMD, University of Maryland, biostatistics, postdoctoral fellow, statistical genetics, cancer epidemiology, longitudinal data, prostate cancer">
-
-<!-- SEO: Author -->
 <meta name="author" content="Pei Zhang">
-
-<!-- SEO: Canonical URL -->
 <link rel="canonical" href="https://peizhang.org/">
-
-<!-- SEO: Open Graph -->
 <meta property="og:title" content="Pei Zhang, Ph.D. | Postdoctoral Fellow, NCI/DCEG">
 <meta property="og:description" content="Postdoctoral Fellow at NCI/DCEG, NIH. Ph.D. from University of Maryland. Research in biostatistics, statistical genetics, and cancer epidemiology.">
 <meta property="og:url" content="https://peizhang.org/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://peizhang.org/Pei_Zhang.jpeg">
 
-<!-- SEO: Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,72 +46,114 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
-  :root {--accent: #d414b8;}
+  :root {
+    --accent: #d414b8;
+    --bg: #ffffff;
+    --text: #222222;
+    --text-soft: #555555;
+    --text-muted: #888888;
+    --text-faint: #777777;
+    --nav-bg: #1f1f1f;
+    --nav-text: #cccccc;
+    --nav-text-hover: #ffffff;
+    --card-shadow: rgba(0,0,0,0.08);
+    --border-soft: #eeeeee;
+    --border-faint: #f0f0f0;
+    --rule: #dddddd;
+    --rule-strong: #222222;
+    --overlay-bg: rgba(255,255,255,0.97);
+    --home-body-text: #222222;
+  }
+  [data-theme="dark"] {
+    --accent: #f06fd8;
+    --bg: #141416;
+    --text: #e7e7ea;
+    --text-soft: #b5b5bd;
+    --text-muted: #8f8f99;
+    --text-faint: #9a9aa4;
+    --nav-bg: #0d0d0f;
+    --nav-text: #b9b9c2;
+    --nav-text-hover: #ffffff;
+    --card-shadow: rgba(0,0,0,0.55);
+    --border-soft: #2a2a2e;
+    --border-faint: #242428;
+    --rule: #333338;
+    --rule-strong: #3a3a40;
+    --overlay-bg: rgba(20,20,22,0.97);
+    --home-body-text: #e7e7ea;
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Aptos', 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 17px; color: #222; background: #fff; line-height: 1.9; }
+  body { font-family: 'Aptos', 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 17px; color: var(--text); background: var(--bg); line-height: 1.9; transition: background 0.3s ease, color 0.3s ease; }
   .home-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: #1f1f1f; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: var(--nav-bg); transition: background 0.3s ease; }
   nav .sitename { font-size: 18px; font-weight: 500; color: #fff; }
   nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
-  nav ul li a { font-size: 14px; color: #ccc; font-family: -apple-system, sans-serif; text-decoration: none; }
-  nav ul li a:hover { color: #fff; }
+  nav ul li a { font-size: 14px; color: var(--nav-text); font-family: -apple-system, sans-serif; text-decoration: none; }
+  nav ul li a:hover { color: var(--nav-text-hover); }
   nav ul li a.active { color: var(--accent); font-weight: 600; }
 
-  .search-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.97); padding: 24px 48px; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .theme-btn { background: none; border: 1px solid #555; color: var(--nav-text); font-size: 14px; cursor: pointer; line-height: 1; padding: 6px 9px; border-radius: 6px; display: flex; align-items: center; justify-content: center; transition: color 0.2s, border-color 0.2s; }
+  .theme-btn:hover { color: var(--nav-text-hover); border-color: #888; }
+
+  .search-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; background: var(--overlay-bg); padding: 24px 48px; z-index: 1000; box-shadow: 0 2px 12px var(--card-shadow); }
   .search-overlay.open { display: block; }
-  .search-overlay-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #1f1f1f; padding-bottom: 8px; }
-  .search-overlay-inner input { flex: 1; border: none; outline: none; font-size: 20px; font-family: Georgia, serif; color: #222; background: transparent; }
-  .search-overlay-inner input::placeholder { color: #aaa; }
-  .search-close { background: none; border: none; font-size: 22px; cursor: pointer; color: #888; line-height: 1; }
-  .search-close:hover { color: #222; }
+  .search-overlay-inner { max-width: 680px; margin: 0 auto; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid var(--rule-strong); padding-bottom: 8px; }
+  .search-overlay-inner input { flex: 1; border: none; outline: none; font-size: 20px; font-family: Georgia, serif; color: var(--text); background: transparent; }
+  .search-overlay-inner input::placeholder { color: var(--text-muted); }
+  .search-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text-muted); line-height: 1; }
+  .search-close:hover { color: var(--text); }
   #search-results { max-width: 680px; margin: 16px auto 0; font-size: 15px; font-family: -apple-system, sans-serif; }
-  #search-results a { color: var(--accent); display: block; padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+  #search-results a { color: var(--accent); display: block; padding: 6px 0; border-bottom: 1px solid var(--border-faint); }
   #search-results a:hover { text-decoration: underline; }
 
   .page { display: none; max-width: 900px; margin: 0 auto; padding: 3rem 48px 6rem; }
   .page.active { display: block; }
-  .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .home-photo-img { width: 240px; height: 300px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 12px var(--card-shadow); }
   .mentor { color: var(--accent); text-decoration: none; }
   .mentor:hover { text-decoration: underline; }
   .teaching-entry { display: flex; gap: 1.6rem; margin-bottom: 1.2rem; }
-  .teaching-time { width: 160px; font-size: 14px; color: #888; font-family: -apple-system, sans-serif; flex-shrink: 0; }
+  .teaching-time { width: 160px; font-size: 14px; color: var(--text-muted); font-family: -apple-system, sans-serif; flex-shrink: 0; }
   .teaching-content strong { font-size: 18px; font-weight: 600; display: block; }
-  .teaching-content span { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; }
+  .teaching-content span { font-size: 15px; color: var(--text-soft); font-family: -apple-system, sans-serif; }
   .gallery-container { display: flex; flex-direction: column; gap: 1.8rem; align-items: center; }
   .gallery-container figure { max-width: 520px; text-align: center; }
-  .gallery-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-  .gallery-container figcaption { margin-top: 0.5rem; font-size: 13px; color: #666; }
+  .gallery-container img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px var(--card-shadow); }
+  .gallery-container figcaption { margin-top: 0.5rem; font-size: 13px; color: var(--text-faint); }
   .home-name { font-size: 52px; font-weight: normal; color: var(--accent); margin-bottom: 0.3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
-  .home-body { display: block; font-size: 16px; color: #222; }
+  .home-body { display: block; font-size: 16px; color: var(--home-body-text); }
   .home-photo { float: right; margin: 0 0 1.5rem 2.5rem; width: 240px; }
   .home-text p + p { margin-top: 1em; }
   .home-body::after { content: ''; display: table; clear: both; }
   .page-title { font-size: 28px; font-weight: normal; color: var(--accent); margin-bottom: 2rem; text-align: center; }
-  h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: #888; font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+  h2.sh { font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em; color: var(--text-muted); font-family: -apple-system, sans-serif; font-weight: 600; margin: 2rem 0 0.8rem; border-bottom: 1px solid var(--border-soft); padding-bottom: 5px; }
   h2.sh:first-of-type { margin-top: 0; }
-  h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: #555; margin: 1.2rem 0 0.5rem; }
+  h3.ssh { font-size: 13px; font-weight: 600; font-family: -apple-system, sans-serif; color: var(--text-soft); margin: 1.2rem 0 0.5rem; }
   .cv-entry { display: flex; gap: 1.4rem; margin-bottom: 0.9rem; }
   .cv-detail { font-size: 15px; }
   .cv-detail strong { font-weight: bold; display: block; line-height: 1.45; }
-  .cv-detail span { font-size: 13.5px; color: #555; font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
-  .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid #ddd; }
+  .cv-detail span { font-size: 13.5px; color: var(--text-soft); font-family: -apple-system, sans-serif; display: block; line-height: 1.5; }
+  .pub { margin-bottom: 1.3rem; padding-left: 1rem; border-left: 2px solid var(--rule); }
   .pub .ptitle { font-size: 15px; }
   .pub .ptitle a { color: var(--accent); }
-  .pub .authors { font-size: 13.5px; color: #444; margin-top: 2px; }
-  .pub .venue { font-size: 13px; color: #888; font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
+  .pub .authors { font-size: 13.5px; color: var(--text); margin-top: 2px; }
+  .pub .venue { font-size: 13px; color: var(--text-muted); font-style: italic; font-family: -apple-system, sans-serif; margin-top: 1px; }
   .pub-num { display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-family: -apple-system, sans-serif; text-align: center; line-height: 20px; margin-right: 6px; }
-  .gallery-note { font-size: 15px; color: #555; font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
-  .search-btn { background: none; border: none; color: #ccc; font-size: 16px; cursor: pointer; line-height: 1; padding: 0; }
+  .gallery-note { font-size: 15px; color: var(--text-soft); font-family: -apple-system, sans-serif; margin-bottom: 1.5rem; }
+  .search-btn { background: none; border: none; color: var(--nav-text); font-size: 16px; cursor: pointer; line-height: 1; padding: 0; }
   .search-btn:hover { color: var(--accent); }
-  .legend { font-size: 13px; color: #888; font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
-  footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid #222; margin-top: 3rem; }
+  .legend { font-size: 13px; color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 1rem; }
+  footer { text-align: center; font-family: -apple-system, sans-serif; padding: 2rem; border-top: 1px solid var(--rule-strong); margin-top: 3rem; }
   .footer-icons { display: flex; justify-content: center; gap: 1.8rem; margin-bottom: 1rem; }
-  .footer-icons a { color: #222; font-size: 24px; text-decoration: none; transition: color 0.2s; }
+  .footer-icons a { color: var(--text); font-size: 24px; text-decoration: none; transition: color 0.2s; }
   .footer-icons a:hover { color: var(--accent); }
   .footer-copy { font-size: 13px; color: var(--accent); }
+
+  .news-head, .honors-head, .interests-head { color: var(--accent); font-size: 15px !important; }
+  .soft-note { color: var(--text-faint); font-size: 14.5px !important; }
 </style>
 </head>
 <body>
@@ -139,12 +168,13 @@
     <li><a href="#" class="nav-link" data-page="links">Links</a></li>
     <li><a href="#" class="nav-link" data-page="gallery">Gallery</a></li>
     <li><button class="search-btn" onclick="toggleSearch()" aria-label="Search"><i class="fas fa-search"></i></button></li>
+    <li><button class="theme-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle light/dark mode"><i class="fas fa-moon"></i></button></li>
   </ul>
 </nav>
 
 <div id="search-overlay" class="search-overlay">
   <div class="search-overlay-inner">
-    <span style="font-size:18px; color:#aaa;"><i class="fas fa-search"></i></span>
+    <span style="font-size:18px; color:var(--text-muted);"><i class="fas fa-search"></i></span>
     <input type="text" id="search-input" placeholder="Search this site..." onkeyup="siteSearch()" autocomplete="off">
     <button class="search-close" onclick="toggleSearch()" aria-label="Close">&#x2715;</button>
   </div>
@@ -181,8 +211,8 @@
       <div style="margin-top:2rem;">
         <div style="display:flex; gap:3rem; flex-wrap:wrap;">
           <div style="flex:1; min-width:200px;">
-            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;">Research Interests</div>
-            <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.9;">
+            <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.7rem;" class="interests-head">Research Interests</div>
+            <ul style="font-size:16px; color:var(--text); padding-left:1.1rem; line-height:1.9;">
               <li>Longitudinal &amp; correlated data methodology </li>
               <li>Dynamic genetic effects &amp; heritability (PLCO, All of Us, UK Biobank, EHR)</li>
               <li>Prostate cancer early detection</li>
@@ -194,26 +224,26 @@
         </div>
       </div>
 
-      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
-        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">News</div>
-        <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-soft);">
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;" class="news-head">News</div>
+        <ul style="font-size:16px; color:var(--text); padding-left:1.1rem; line-height:1.8; list-style:square;">
 
-          <li><strong>2026-08-03</strong> — Contributed Talk on "Heritability Estimation of Longitudinal EHR Traits in the Presence of Informative Measurement Processes" in the Session: "Methods and Designs for the Studies on Electronic Health Record Data" on Monday, August 3 (10:30am-12:20pm) <div style="color:#777; font-size:13.5px;">JSM 2026, Boston, MA, United States</div></li>
+          <li><strong>2026-08-03</strong> — Contributed Talk on "Heritability Estimation of Longitudinal EHR Traits in the Presence of Informative Measurement Processes" in the Session: "Methods and Designs for the Studies on Electronic Health Record Data" on Monday, August 3 (10:30am-12:20pm) <div class="soft-note" style="font-size:13.5px;">JSM 2026, Boston, MA, United States</div></li>
           <li><strong>2026-07-15</strong> — Invited talk on "Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals" in the invited Session: "Novel Statistical Methodology for Genetic Studies with Longitudinal Phenotypes" on Wendesday, July 15 (1:00pm-2:30pm).
-            <div style="color:#777; font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
+            <div class="soft-note" style="font-size:13.5px;">IBC 2026, Seoul, South Korea</div></li>
           <li><strong>2026-05-26</strong> — Invited talk on "Dynamic Genetic Contributions to Biomarker Trajectories: Evidence from PSA Velocity and Extensions to EHR Data" on Tuesday, May 26, 2026 (12:10pm-1pm).
-            <div style="color:#777; font-size:13.5px;">Biostatistics Seminar, University of California, Davis Comprehensive Cancer Center, Davis, CA, United States</div></li>
-          <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</a>.<div style="color:#777; font-size:13.5px;">Biostatistics</div></li>
+            <div class="soft-note" style="font-size:13.5px;">Biostatistics Seminar, University of California, Davis Comprehensive Cancer Center, Davis, CA, United States</div></li>
+          <li><strong>2026-04</strong> — Paper accepted: <a href="https://arxiv.org/abs/2505.04773">Estimating the Heritability of Longitudinal Rate-of-Change: Genetic Insights into PSA Velocity in Prostate Cancer-Free Individuals</a>.<div class="soft-note" style="font-size:13.5px;">Biostatistics</div></li>
           <li><strong>2026-03</strong> — Awards: <a href="https://imstat.org/2026/04/29/recipients-of-the-2026-ims-new-researcher-travel-awards-announced/">IMS New Researcher Travel Award</a>; <a href="https://www.nsf.gov/awards/travel-costs-resources">NSF Travel Award</a>.</li>
           <li><strong>2026-03</strong> — Service: Committee member and Chief Judge, <a href="https://www.training.nih.gov/felcom/fare/">NIH FARE Award 2027 Competition</a>.</li>
           <li><strong>2025-07-08</strong> — <a href="https://www.training.nih.gov/pdf/fare/">NIH FARE Award 2026</a>.</li>
-          <li><strong>2025-03-22</strong> — Paper accepted: <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">Mixed Modeling Approach for Characterizing Genetic Effects in a Longitudinal Phenotype</a>.<div style="color:#777; font-size:13.5px;">Annals of Applied Statistics</div></li>
+          <li><strong>2025-03-22</strong> — Paper accepted: <a href="https://pubmed.ncbi.nlm.nih.gov/40893136/">Mixed Modeling Approach for Characterizing Genetic Effects in a Longitudinal Phenotype</a>.<div class="soft-note" style="font-size:13.5px;">Annals of Applied Statistics</div></li>
         </ul>
       </div>
 
-      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid #eee;">
-        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;">Honors</div>
-        <ul style="font-size:14.5px; color:#333; padding-left:1.1rem; line-height:1.8; list-style:square;">
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-soft);">
+        <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; font-family:-apple-system,sans-serif; font-weight:600; margin-bottom:0.9rem;" class="honors-head">Honors</div>
+        <ul style="font-size:16px; color:var(--text); padding-left:1.1rem; line-height:1.8; list-style:square;">
           <li><strong>2026</strong> — <a href="https://imstat.org/2026/04/29/recipients-of-the-2026-ims-new-researcher-travel-awards-announced/">IMS New Researcher Travel Award</a>; <a href="https://www.nsf.gov/awards/travel-costs-resources">NSF Travel Award</a>; Finalist (one of six selected finalists) of the <a href="https://biometricsociety-awards.org">IBS/CWS Florence Nightingale Award</a>; NSF-Supported Travel Award for NISS Writing Workshop </li>
           <li><strong>2025</strong> — NCI-DCEG Institutional Nominee for <a href="https://www.cancer.gov/grants-training/training/funding/early-k99">NCI Pathway to Independence Award for Outstanding Early Stage Postdoctoral Researchers (K99/R00)</a>; <a href="https://www.training.nih.gov/pdf/fare/">NIH FARE Award 2026</a>; NIH Outstanding Graduate Research Award</li>
           <li><strong>2023-2024</strong> — WSDS Student Travel Award (twice)</li>
@@ -225,7 +255,7 @@
         </ul>
       </div>
 
-      <div style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid #eee; font-family:-apple-system,sans-serif; font-size:14.5px; color:#333;">
+      <div style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid var(--border-soft); font-family:-apple-system,sans-serif; font-size:14.5px; color:var(--text);">
         <div>Email: <a href="mailto:pei.zhang@nih.gov">pei.zhang@nih.gov</a></div>
         <div style="margin-top:4px;">Office: 9609 Medical Center Dr, Room 7E614, Rockville, MD 20850, USA</div>
       </div>
@@ -343,7 +373,7 @@
 <div class="page" id="pg-cv">
   <h1 class="page-title">CV</h1>
   <iframe src="Pei_Zhang_CV.pdf" width="100%" height="800px"
-    style="border: none; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+    style="border: none; border-radius: 4px; box-shadow: 0 2px 12px var(--card-shadow);">
     Your browser does not support embedded PDFs.
     <a href="Pei_Zhang_CV.pdf" target="_blank">Click here to download.</a>
   </iframe>
@@ -421,6 +451,31 @@
       show(this.dataset.page);
     });
   });
+
+  // ---- Light/Dark mode ----
+  function applyTheme(theme) {
+    const btn = document.getElementById('theme-btn');
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<i class="fas fa-sun"></i>';
+      btn.title = 'Switch to light mode';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      btn.innerHTML = '<i class="fas fa-moon"></i>';
+      btn.title = 'Switch to dark mode';
+    }
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    applyTheme(isDark ? 'light' : 'dark');
+  }
+
+  // Respect the visitor's OS preference on first load
+  (function initTheme() {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  })();
 
   function toggleSearch() {
     const overlay = document.getElementById("search-overlay");
